@@ -1,0 +1,2 @@
+"C causa 1", "Solução 1"
+"C causa 2", "Solução 2"
