@@ -9,7 +9,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { Component1Component } from './component-1/component-1.component';
 import { Component2Component } from './component-2/component-2.component';
-import { Component3Component } from './component-3/component-3.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,7 +20,6 @@ import { AppRoutingModule } from './app-routing.module';
 		MainNavComponent,
 		Component1Component,
 		Component2Component,
-		Component3Component,
 	],
 	imports: [
 		BrowserModule,
