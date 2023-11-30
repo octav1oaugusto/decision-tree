@@ -1,19 +1,24 @@
-import { Component, inject } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-main-nav',
-  templateUrl: './main-nav.component.html',
-  styleUrls: ['./main-nav.component.css']
+	selector: 'main-nav',
+	templateUrl: './main-nav.component.html',
+	styleUrls: ['./main-nav.component.css'],
 })
-export class MainNavComponent {
-    private breakpointObserver = inject(BreakpointObserver);
+export class MainNavComponent implements OnInit {
+	sidenavWidth = 4;
 
-    isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-      .pipe(
-        map(result => result.matches),
-        shareReplay()
-      );
+	constructor(private router: Router) {}
+
+	ngOnInit() {}
+
+	increase() {
+		this.sidenavWidth = 15;
+		console.log('increase sidenav width');
+	}
+	decrease() {
+		this.sidenavWidth = 4;
+		console.log('decrease sidenav width');
+	}
 }
