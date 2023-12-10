@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface TreeNode {
-  id: number;
-  label: string;
-  children?: TreeNode[];
-}
+import { DecisionTreeService } from '../../providers/decision-tree.service';
+import { TreeNode } from '../models/tree.model';
 
 @Component({
   selector: 'app-component-2',
@@ -12,9 +8,14 @@ export interface TreeNode {
   styleUrls: ['./component-2.component.css'],
 })
 export class Component2Component implements OnInit {
-  constructor() {}
+  constructor(public treeService: DecisionTreeService) {}
 
-  ngOnInit() {}
+  public decisionTreeService: DecisionTreeService;
+  treeData: TreeNode;
+
+  ngOnInit() {
+    this.getTreeData();
+  }
 
   rootNode: TreeNode = {
     id: 1,
@@ -35,4 +36,16 @@ export class Component2Component implements OnInit {
       },
     ],
   };
+
+  getTreeData() {
+    this.treeService.getTree().subscribe(
+      (data) => {
+        this.treeData = data;
+        console.log('Tree Data:', this.treeData);
+      },
+      (error) => {
+        console.error('Error fetching tree data:', error);
+      }
+    );
+  }
 }

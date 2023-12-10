@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TreeNode } from '../tree-diagram/tree-diagram.component';
+import { TreeNode } from '../models/tree.model';
 
 @Component({
   selector: 'app-tree-node',

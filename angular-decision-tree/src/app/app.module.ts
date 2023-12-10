@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -5,6 +6,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DecisionTreeService } from '../providers/decision-tree.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Component1Component } from './component-1/component-1.component';
@@ -31,8 +33,9 @@ import { TreeNodeComponent } from './tree-node/tree-node.component';
     MatIconModule,
     // FlexLayoutModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [DecisionTreeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface TreeNode {
-  id: number;
-  label: string;
-  children?: TreeNode[];
-}
+import { TreeNode } from '../models/tree.model';
 
 @Component({
   selector: 'app-tree-diagram',
