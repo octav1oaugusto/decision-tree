@@ -6,12 +6,12 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DecisionTreeService } from '../providers/decision-tree.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Component1Component } from './component-1/component-1.component';
 import { Component2Component } from './component-2/component-2.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { DecisionTreeService } from './providers/decision-tree.service';
 import { TreeDiagramComponent } from './tree-diagram/tree-diagram.component';
 import { TreeNodeComponent } from './tree-node/tree-node.component';
 

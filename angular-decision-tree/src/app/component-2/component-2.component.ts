@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DecisionTreeService } from '../../providers/decision-tree.service';
 import { TreeNode } from '../models/tree.model';
+import { DecisionTreeService } from '../providers/decision-tree.service';
 
 @Component({
   selector: 'app-component-2',
