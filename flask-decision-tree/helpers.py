@@ -2,17 +2,17 @@
 def parse_id(text):
   text = text.strip()
   if text.endswith('"'):
-    # Sintoma
-    if text.startswith('"S '):
+    # Sintoma ou causa
+    if text.startswith('"S ') or text.startswith('"C '):
       # ...
       id = text[3:-1]
       return id
-    # Causa
-    if text.startswith('"C '):
-      # ...
-      id = text[3:-1]
-      return id
-  # print(text)
+  #   # Causa
+  #   if text.startswith('"C '):
+  #     # ...
+  #     id = text[3:-1]
+  #     return id
+  # # print(text)
   raise Exception('Identificador inválido. Um identificador deve começar com "C " ou "S ".')
 
 # Solução
