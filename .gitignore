@@ -1,3 +1,4 @@
 flask-decision-tree/venv
 .vscode
 Dockerfile
+__pycache__

@@ -1,6 +1,6 @@
 from files import parse_rules as get_rules
 from files import parse_solutions as get_solutions
-from conditions import Condition, Not, And 
+from conditions import Condition
 
 class TreeNode:
     def __init__(self, symptom=None, cause=None, probability=None, left=None, right=None):
@@ -57,6 +57,14 @@ rules = [
     ("C Binary Lifting",["-Lowest Common Ancestor"],0.42),
     ("C Catalan Numbers",["Modular Operations"],0.66),
 ]
+
+print(get_rules())
+print(
+    Condition("2-SAT") == Condition("2-SAT"),
+    Condition("2-SAT", True) == Condition("2-SAT", True),
+    Condition("Binary Lifting") == Condition("2-SAT"),
+    Condition("2-SAT", True) == Condition("2-SAT")
+)
 
 decision_tree = build_decision_tree(rules)
 print_tree(decision_tree)
