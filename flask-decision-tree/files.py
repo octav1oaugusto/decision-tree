@@ -19,13 +19,16 @@ def parse_rules():
   return rules
 
 def parse_solutions():
-  # Talvez seja melhor solutions ser um dict: id -> solução, ao invés de uma lista [(id, solucao)]
-  solutions = []
+  solutions = {}
   lines = parse_file(SOLUTIONS_FILE)
   for line in lines:
     id, solution = line
-    solutions.append((parse_id(id), parse_solution(solution)))
+    id, solution = parse_id(id), parse_solution(solution)
+    if id in solutions.keys():
+      solutions[id].append(solution)
+    else:
+      solutions[id] = [solution]
   return solutions
 
-print(parse_solutions())
-print(parse_rules())
+# print(parse_solutions())
+# print(parse_rules())
