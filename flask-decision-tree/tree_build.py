@@ -10,7 +10,7 @@ class TreeNode:
         self.left = left
         self.right = right
     def __str__(self):
-        return self.cause + ' Confiança: ' + self.probability
+        return self.cause + ' Confiança: ' + str(self.probability)
 
 
 def build_decision_tree(rules, discarded_symptoms=set()):
@@ -46,16 +46,23 @@ def print_tree(node, depth=0):
         if node.symptom is not None:
             print(f"{node.symptom}?")
         if node.cause is not None:
-            print(f"  --> {node.cause} ({node.probability:.2f})")
+            print(f"  --> {node}")
         print_tree(node.left, depth + 1)
         print_tree(node.right, depth + 1)
-        print((x.cause, x.probability) for x in node)
+
+def get_leaves(leaves, id, right):
+    ret = []
+    for i in range(len(leaves)):
+        ret.append({"id" : id+str(2*i + right), "label" : str(leaves[i])})
+    return ret
+
 
 def tree_data(tree, id= '0'):
     return {"key" : id,
             "label" : str(tree.symptom) if tree.left or tree.right else 'Resposta: ',
             #"icon" : questionmark if tree.left or tree.right else exclamationmark
-            "children" : [tree_data(tree.left, id+'-0'), tree_data(tree.right, id+'-1')] if tree.left or tree.right else str(tree),},
+            "children" : [tree_data(tree.left, id+'-0') if type(tree.left) is not list else get_leaves(tree.left, id, 2), 
+                          tree_data(tree.right, id+'-1') if type(tree.right) is not list else get_leaves(tree.right, id, 3)]}
 
 def get_tree_data():
     return tree_data(build_decision_tree(get_rules()))
@@ -63,6 +70,4 @@ def get_tree_data():
 #parse_rules() : [("Causa", [Condition("cond", not:bool)], 0.55f)]
 
 if __name__ == "__main__":
-    rules = get_rules()
-    decision_tree = build_decision_tree(rules)
-    print_tree(decision_tree)
+    print(get_tree_data())
