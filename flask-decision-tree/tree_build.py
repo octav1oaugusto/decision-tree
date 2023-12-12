@@ -50,10 +50,11 @@ def print_tree(node, depth=0):
         print_tree(node.right, depth + 1)
 
 
-def tree_data(tree, id= 1):
-    return {"id" : id,
-            "label" : "Root Node" if id == 1 else f"Child Node {id}.x",
-            "children" : [tree_data(tree.left, (2*id)), tree_data(tree.right, (2*id) + 1)],}
+def tree_data(tree, id= '0'):
+    return {"key" : id,
+            "label" : str(tree.symptom),
+            #"icon" : questionmark if tree.left or tree.right else exclamationmark
+            "children" : [tree_data(tree.left, id+'-0'), tree_data(tree.right, id+'-1')] if tree.left or tree.right else None,},
 
 def get_tree_data():
     return tree_data(build_decision_tree(get_rules()))
