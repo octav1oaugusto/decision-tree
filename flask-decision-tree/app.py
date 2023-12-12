@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from utils import get_tree_data
+from tree_build import get_tree_data
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
