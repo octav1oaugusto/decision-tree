@@ -9,13 +9,14 @@ class TreeNode:
         self.probability = probability
         self.left = left
         self.right = right
+    def __str__(self):
+        return self.cause + ' Confiança: ' + self.probability
 
 
 def build_decision_tree(rules, discarded_symptoms=set()):
     considered_symptoms = set(symptom for _, symptoms, _ in rules for symptom in symptoms)
     if len(discarded_symptoms) >= len(considered_symptoms):
-        # aqui vai a causa
-        return None
+        return [TreeNode(cause= rule[0], probability=rule[2]) for rule in rules]
 
     valid_symptoms = considered_symptoms - discarded_symptoms
     best_symptom = max(valid_symptoms, key=lambda x: information_gain(x, rules))
@@ -48,13 +49,13 @@ def print_tree(node, depth=0):
             print(f"  --> {node.cause} ({node.probability:.2f})")
         print_tree(node.left, depth + 1)
         print_tree(node.right, depth + 1)
-
+        print((x.cause, x.probability) for x in node)
 
 def tree_data(tree, id= '0'):
     return {"key" : id,
-            "label" : str(tree.symptom),
+            "label" : str(tree.symptom) if tree.left or tree.right else 'Resposta: ',
             #"icon" : questionmark if tree.left or tree.right else exclamationmark
-            "children" : [tree_data(tree.left, id+'-0'), tree_data(tree.right, id+'-1')] if tree.left or tree.right else None,},
+            "children" : [tree_data(tree.left, id+'-0'), tree_data(tree.right, id+'-1')] if tree.left or tree.right else str(tree),},
 
 def get_tree_data():
     return tree_data(build_decision_tree(get_rules()))
