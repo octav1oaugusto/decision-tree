@@ -1,0 +1,496 @@
+"C 2-SAT",("S And"),0.55
+"C 2-SAT",("S Bit"),0.24
+"C 2-SAT",("S Bitwise"),0.03
+"C 2-SAT",("S Directed Graph";"S Graph";"S Bit";"S Bitwise";"S And";"S Or"),0.06
+"C 2-SAT",("S Directed Graph"),0.26
+"C 2-SAT",("S Graph"),0.8
+"C 2-SAT",("S Or"),0.61
+"C 2-SAT",(NOT "S Convex Hull Trick"),0.13
+"C Aho-Corasick",("S Breadth First Search"),0.28
+"C Aho-Corasick",("S Depth First Search"),0.99
+"C Aho-Corasick",("S Graph"),0.97
+"C Aho-Corasick",("S Pattern Matching"),0.97
+"C Aho-Corasick",("S String Comparing"),0.38
+"C Aho-Corasick",("S Tree";"S String Comparing";"S Pattern Matching";"S Breadth First Search";"S Depth First Search";"S Graph"),0.1
+"C Aho-Corasick",("S Tree"),0.87
+"C Aho-Corasick",(NOT "S Euler Tour"),0.51
+"C Binary Exponentiation",("S Exponentiation"),0.14
+"C Binary Exponentiation",("S Large Exponents"),0.98
+"C Binary Exponentiation",("S Matrix Multiplication"),0.01
+"C Binary Exponentiation",("S Modular Arithmetic";"S Matrix Multiplication";"S Exponentiation";"S Large Exponents"),0.1
+"C Binary Exponentiation",("S Modular Arithmetic"),0.47
+"C Binary Exponentiation",(NOT "S Geometry"),0.96
+"C Binary Lifting",("S Array"),0.56
+"C Binary Lifting",("S Depth First Search"),0.75
+"C Binary Lifting",("S Graph"),0.18
+"C Binary Lifting",("S Lowest Common Ancestor";"S Graph";"S Tree";"S Lowest Common Ancestor";"S Depth First Search";"S Array"),0.1
+"C Binary Lifting",("S Lowest Common Ancestor"),0.09
+"C Binary Lifting",("S Lowest Common Ancestor"),0.42
+"C Binary Lifting",("S Tree"),0.27
+"C Binary Lifting",(NOT "S Coefficients"),0.16
+"C Binary Search",("S Divide and Conquer";"S Search"),0.03
+"C Binary Search",("S Divide and Conquer"),0.04
+"C Binary Search",("S Search"),0.74
+"C Binary Search",(NOT "S Greatest Common Divisor"),0.39
+"C Binomial Coefficients",("S Chinese Remainder Theorem"),0.5
+"C Binomial Coefficients",("S Coefficients"),0.35
+"C Binomial Coefficients",("S Combinatory"),0.8
+"C Binomial Coefficients",("S Coprime"),0.3
+"C Binomial Coefficients",("S Factorial"),0.2
+"C Binomial Coefficients",("S Modular Multiplicative Inverse"),0.47
+"C Binomial Coefficients",("S Modular Operations";"S Permutations";"S Prime Numbers";"S Coefficients";"S Modular Multiplicative Inverse";"S Coprime";"S Chinese Remainder Theorem";"S Combinatory";"S Factorial"),0.03
+"C Binomial Coefficients",("S Modular Operations"),0.69
+"C Binomial Coefficients",("S Permutations"),0.89
+"C Binomial Coefficients",("S Prime Numbers"),0.1
+"C Binomial Coefficients",(NOT "S 2-SAT"),0.04
+"C Bipartite Graph",("S Bipartite Graph"),0.69
+"C Bipartite Graph",("S Breadth First Search"),0.38
+"C Bipartite Graph",("S Disjoint Set Union"),0.33
+"C Bipartite Graph",("S Graph";"S Disjoint Set Union";"S Undirected Graph";"S Breadth First Search";"S Bipartite Graph"),0.05
+"C Bipartite Graph",("S Graph"),0.38
+"C Bipartite Graph",("S Undirected Graph"),0.88
+"C Bipartite Graph",(NOT "S Fast Fourier Transformation"),0.05
+"C Bit Manipulation",("S And"),0.98
+"C Bit Manipulation",("S Binary";"S Bitwise";"S Two's complement";"S Shift";"S Power of Two";"S And";"S Or";"S Xor";"S Bit"),0.06
+"C Bit Manipulation",("S Binary"),0.65
+"C Bit Manipulation",("S Bit"),0.2
+"C Bit Manipulation",("S Bitwise"),0.2
+"C Bit Manipulation",("S Or"),0.95
+"C Bit Manipulation",("S Power of Two"),0.12
+"C Bit Manipulation",("S Shift"),0.2
+"C Bit Manipulation",("S Two's complement"),0.77
+"C Bit Manipulation",("S Xor"),0.7
+"C Bit Manipulation",(NOT "S Data Structure"),0.07
+"C Breadth First Search",("S Connected Components"),0.07
+"C Breadth First Search",("S Directed Graph"),0.38
+"C Breadth First Search",("S Graph";"S Shortest Path";"S Unweighted Graph";"S Directed Graph";"S Undirected Graph";"S Connected Components";"S Width Search"),0.1
+"C Breadth First Search",("S Graph"),0.01
+"C Breadth First Search",("S Shortest Path"),0.63
+"C Breadth First Search",("S Undirected Graph"),0.94
+"C Breadth First Search",("S Unweighted Graph"),0.5
+"C Breadth First Search",("S Width Search"),0.8
+"C Breadth First Search",(NOT "S Linear Diophantine Equations"),0.79
+"C Catalan Numbers",("S Binary Search Tree"),0.65
+"C Catalan Numbers",("S Binomial Coefficients"),0.59
+"C Catalan Numbers",("S Combinatory";"S Binomial Coefficients";"S Modular Operations";"S Binary Search Tree";"S Factorial"),0.06
+"C Catalan Numbers",("S Combinatory"),0.82
+"C Catalan Numbers",("S Factorial"),0.97
+"C Catalan Numbers",("S Modular Operations"),0.66
+"C Catalan Numbers",(NOT "S Topological Sorting"),0.13
+"C Chinese Remainder Theorem",("S Congruences"),0.14
+"C Chinese Remainder Theorem",("S Coprime";"S Congruences";"S Modular Inverse";"S Least common multiple";"S Modular Multiplicative Inverse"),0.05
+"C Chinese Remainder Theorem",("S Coprime"),0.11
+"C Chinese Remainder Theorem",("S Least common multiple"),0.13
+"C Chinese Remainder Theorem",("S Modular Inverse"),0.68
+"C Chinese Remainder Theorem",("S Modular Multiplicative Inverse"),0.85
+"C Chinese Remainder Theorem",(NOT "S Graph"),0.14
+"C Circle-Circle Intersection",("S Center of Circles"),0.98
+"C Circle-Circle Intersection",("S Circle-Line Intersection"),0.51
+"C Circle-Circle Intersection",("S Geometry";"S Radius of Circles";"S Center of Circles";"S Vectors";"S Circle-Line Intersection";"S Two-Dimesional Plane"),0.05
+"C Circle-Circle Intersection",("S Geometry"),0.23
+"C Circle-Circle Intersection",("S Radius of Circles"),0.69
+"C Circle-Circle Intersection",("S Two-Dimesional Plane"),0.85
+"C Circle-Circle Intersection",("S Vectors"),0.54
+"C Circle-Circle Intersection",(NOT "S Chinese Remainder Theorem"),0.69
+"C Circle-Line Intersection",("S Center of a Circle"),1
+"C Circle-Line Intersection",("S Geometry";"S Radius of a Circle";"S Center of a Circle";"S Vectors";"S Two-Dimesional Plane"),0.1
+"C Circle-Line Intersection",("S Geometry"),0.19
+"C Circle-Line Intersection",("S Radius of a Circle"),0.53
+"C Circle-Line Intersection",("S Two-Dimesional Plane"),0.74
+"C Circle-Line Intersection",("S Vectors"),0.16
+"C Circle-Line Intersection",(NOT "S Sieve of Eratosthenes"),0.75
+"C Convex Hull Trick",("S Clockwise"),0.2
+"C Convex Hull Trick",("S Collinear"),0.33
+"C Convex Hull Trick",("S Convex Polygon"),0.8
+"C Convex Hull Trick",("S Counterclockwise"),0.71
+"C Convex Hull Trick",("S Cyclic Shift"),0.52
+"C Convex Hull Trick",("S Geometry";"S Convex Polygon";"S Vector";"S Polar Distance";"S Collinear";"S Sets";"S Orientation";"S Clockwise";"S Counterclockwise";"S Cyclic Shift"),0.02
+"C Convex Hull Trick",("S Geometry"),0.96
+"C Convex Hull Trick",("S Orientation"),0.65
+"C Convex Hull Trick",("S Polar Distance"),0.12
+"C Convex Hull Trick",("S Sets"),0.93
+"C Convex Hull Trick",("S Vector"),0.26
+"C Convex Hull Trick",(NOT "S Euler's Totient Function"),0.19
+"C Delaunay Triangulation",("S Convex Hull Trick"),0.48
+"C Delaunay Triangulation",("S Divide and Conquer"),0.73
+"C Delaunay Triangulation",("S Geometry";"S Polygons";"S Convex Hull Trick";"S Voronoi Diagram";"S Divide and Conquer"),0.06
+"C Delaunay Triangulation",("S Geometry"),0.63
+"C Delaunay Triangulation",("S Polygons"),0.1
+"C Delaunay Triangulation",("S Voronoi Diagram"),0.45
+"C Delaunay Triangulation",(NOT "S Knuth-Morris-Pratt"),0.52
+"C Depth First Search",("S Connected Components"),0.67
+"C Depth First Search",("S Depth Search"),0.04
+"C Depth First Search",("S Directed Graph"),0.06
+"C Depth First Search",("S Graph";"S Shortest Path";"S Unweighted Graph";"S Directed Graph";"S Undirected Graph";"S Connected Components";"S Depth Search"),0.08
+"C Depth First Search",("S Graph"),0.51
+"C Depth First Search",("S Shortest Path"),0.42
+"C Depth First Search",("S Undirected Graph"),0.42
+"C Depth First Search",("S Unweighted Graph"),0.86
+"C Depth First Search",(NOT "S Sieve of Eratosthenes"),0.07
+"C Dijkstra",("S Dense Graph"),0.15
+"C Dijkstra",("S Directed Graph"),0.57
+"C Dijkstra",("S Graph";"S Directed Graph";"S Undirected Weighted Graph";"S Single Source Shortest Path";"S Sparse Graph";"S Dense Graph"),0.09
+"C Dijkstra",("S Graph"),0.84
+"C Dijkstra",("S Single Source Shortest Path"),0.03
+"C Dijkstra",("S Sparse Graph"),0.13
+"C Dijkstra",("S Undirected Weighted Graph"),0.7
+"C Dijkstra",(NOT "S Automaton"),0.44
+"C Dinic",("S Acyclic Graph"),0.74
+"C Dinic",("S Depth First Search"),0.99
+"C Dinic",("S Graph";"S Maximum Flow";"S Residual Network";"S Single Source Shortest Path";"S Acyclic Graph";"S Depth First Search"),0.01
+"C Dinic",("S Graph"),0.89
+"C Dinic",("S Maximum Flow"),0.43
+"C Dinic",("S Residual Network"),0.25
+"C Dinic",("S Single Source Shortest Path"),0.83
+"C Dinic",(NOT "S Voronoi Diagram"),0.74
+"C Disjoint Set Union",("S Combine Sets"),0.86
+"C Disjoint Set Union",("S Data Structure";"S Tree";"S Combine Sets";"S Union-Find"),0.08
+"C Disjoint Set Union",("S Data Structure"),0.54
+"C Disjoint Set Union",("S Tree"),0.69
+"C Disjoint Set Union",("S Union-Find"),0.64
+"C Disjoint Set Union",(NOT "S Chinese Remainder Theorem"),0.44
+"C Divide and Conquer",("S Dynamic Programming";"S Optimization"),0.08
+"C Divide and Conquer",("S Dynamic Programming"),0.94
+"C Divide and Conquer",("S Optimization"),0.85
+"C Divide and Conquer",(NOT "S Suffix Array"),0.89
+"C Dynamic Programming",("S Bottom-Up"),0.8
+"C Dynamic Programming",("S Breadth First Search"),0.19
+"C Dynamic Programming",("S Depth First Search"),0.24
+"C Dynamic Programming",("S Search"; "S Top-Down"; "S Bottom-Up"; "S Breadth First Search"; "S Depth First Search"),0.03
+"C Dynamic Programming",("S Search"),0.1
+"C Dynamic Programming",("S Top-Down"),0.59
+"C Dynamic Programming",(NOT "S Sqrt Decomposition"),0.77
+"C Equation of a Line For a Segment",("S Geometry";"S Line Equation";"S Greatest Common Divisor";"S Normalization";"S Vector";"S Two-Dimesional Plane"),0.08
+"C Equation of a Line For a Segment",("S Geometry"),0.41
+"C Equation of a Line For a Segment",("S Greatest Common Divisor"),0.86
+"C Equation of a Line For a Segment",("S Line Equation"),0.58
+"C Equation of a Line For a Segment",("S Normalization"),0.68
+"C Equation of a Line For a Segment",("S Two-Dimesional Plane"),0.53
+"C Equation of a Line For a Segment",("S Vector"),0.74
+"C Equation of a Line For a Segment",(NOT "S Modular Multiplicative Inverse"),0.5
+"C Euler Tour",("S Cycles"),0.48
+"C Euler Tour",("S Eulerian Cycle"),0.68
+"C Euler Tour",("S Graph";"S Cycles";"S Eulerian Cycle"),0.02
+"C Euler Tour",("S Graph"),0.84
+"C Euler Tour",(NOT "S String Comparing"),0.64
+"C Euler's Totient Function",("S Chinese Remainder Theorem"),0.72
+"C Euler's Totient Function",("S Coprime"),0.99
+"C Euler's Totient Function",("S Greatest Common Divisor"),0.05
+"C Euler's Totient Function",("S Least Common Multiple"),0.27
+"C Euler's Totient Function",("S Modular Multiplicative Inverse"),0.54
+"C Euler's Totient Function",("S Modular Operation"),0.34
+"C Euler's Totient Function",("S Prime Numbers";"S Greatest Common Divisor";"S Chinese Remainder Theorem";"S Relatively Prime";"S Coprime";"S Modular Operation";"S Sieve of Erasthothenes";"S Modular Multiplicative Inverse";"S Least Common Multiple"),0.08
+"C Euler's Totient Function",("S Prime Numbers"),0.18
+"C Euler's Totient Function",("S Relatively Prime"),0.68
+"C Euler's Totient Function",("S Sieve of Erasthothenes"),0.65
+"C Euler's Totient Function",(NOT "S Acyclic"),0.64
+"C Fast Fourier Transformation",("S Coefficient Vector"),0.08
+"C Fast Fourier Transformation",("S Divide and Conquer"),0.66
+"C Fast Fourier Transformation",("S Multiply Polynomials";"S Divide and Conquer";"S Coefficient Vector";"S Scalar Product";"S String Matching"),0.08
+"C Fast Fourier Transformation",("S Multiply Polynomials"),0.41
+"C Fast Fourier Transformation",("S Scalar Product"),0.3
+"C Fast Fourier Transformation",("S String Matching"),0.21
+"C Fast Fourier Transformation",(NOT "S Geometry"),0.5
+"C Fenwick Tree",("S Binary Associative Function"),0.53
+"C Fenwick Tree",("S Binary Indexed Tree";"S Sum of Values";"S Binary Associative Function";"S Bitwise Operations";"S Minimum of Range";"S Data Structure"),0.09
+"C Fenwick Tree",("S Binary Indexed Tree"),0.28
+"C Fenwick Tree",("S Bitwise Operations"),0.64
+"C Fenwick Tree",("S Data Structure"),0.09
+"C Fenwick Tree",("S Minimum of Range"),0.29
+"C Fenwick Tree",("S Sum of Values"),0.38
+"C Fenwick Tree",(NOT "S Fast Fourier Transformation"),0.26
+"C Finding Bridges",("S Acyclic Graph"),0.66
+"C Finding Bridges",("S Connected Components"),0.37
+"C Finding Bridges",("S Depth First Search"),0.58
+"C Finding Bridges",("S Disjoint Set Union"),0.61
+"C Finding Bridges",("S Graph";"S Undirected Graph";"S Depth First Search";"S Connected Components";"S Disjoint Set Union";"S Acyclic Graph"),0.06
+"C Finding Bridges",("S Graph"),0.57
+"C Finding Bridges",("S Undirected Graph"),0.82
+"C Finding Bridges",(NOT "S Extended Euclidian Algorithm"),0.21
+"C Finding Connected Components",("S Breadth First Search"),0.01
+"C Finding Connected Components",("S Connected Path"),0.6
+"C Finding Connected Components",("S Depth First Search"),0.64
+"C Finding Connected Components",("S Graph";"S Undirected Graph";"S Breadth First Search";"S Depth First Search";"S Connected Path"),0.03
+"C Finding Connected Components",("S Graph"),0.22
+"C Finding Connected Components",("S Undirected Graph"),0.58
+"C Finding Connected Components",(NOT "S Fermat"),0.36
+"C Floyd-Warshall",("S Directed Graph"),0.05
+"C Floyd-Warshall",("S Graph";"S Directed Graph";"S Undirected Unweighted Graph";"S Negative Weight Edges";"S Weighted Graph"),0.01
+"C Floyd-Warshall",("S Graph"),0.74
+"C Floyd-Warshall",("S Negative Weight Edges"),0.08
+"C Floyd-Warshall",("S Undirected Unweighted Graph"),0.25
+"C Floyd-Warshall",("S Weighted Graph"),0.65
+"C Floyd-Warshall",(NOT "S Hashing"),0.41
+"C Ford-Fulkerson and Edmonds-Karp",("S Breadth First Search"),0.86
+"C Ford-Fulkerson and Edmonds-Karp",("S Depth First Search"),0.65
+"C Ford-Fulkerson and Edmonds-Karp",("S Graph";"S Maximum Flow";"S Residual Capacity";"S Residual Network";"S Depth First Search";"S Breadth First Search";"S Max-Flow Min-Cut";"S "),0.07
+"C Ford-Fulkerson and Edmonds-Karp",("S Graph"),0.73
+"C Ford-Fulkerson and Edmonds-Karp",("S Max-Flow Min-Cut"),0.23
+"C Ford-Fulkerson and Edmonds-Karp",("S Maximum Flow"),0.99
+"C Ford-Fulkerson and Edmonds-Karp",("S Residual Capacity"),0.29
+"C Ford-Fulkerson and Edmonds-Karp",("S Residual Network"),0.36
+"C Ford-Fulkerson and Edmonds-Karp",(NOT "S Delaunay Triangulation"),0.93
+"C Greatest Common Divisor",("S Greatest common divisor"),0.08
+"C Greatest Common Divisor",("S Least common multiple"),0.28
+"C Greatest Common Divisor",("S Modular Division";"S Greatest common divisor";"S Least common multiple"),0.07
+"C Greatest Common Divisor",("S Modular Division"),0.87
+"C Greatest Common Divisor",(NOT "S Graph"),0.27
+"C Hashing",("S Modular Multiplicative Inverse"),0.25
+"C Hashing",("S Modular Operations"),0.92
+"C Hashing",("S Prime Numbers"),0.04
+"C Hashing",("S Probability"),0.61
+"C Hashing",("S String Comparing";"S Modular Operations";"S Prime Numbers";"S Probability";"S Modular Multiplicative Inverse"),0.03
+"C Hashing",("S String Comparing"),0.4
+"C Hashing",(NOT "S Geometry"),0.03
+"C Heavy-Light Decomposition",("S Binary Lifting"),0.13
+"C Heavy-Light Decomposition",("S Euler Tour"),0.4
+"C Heavy-Light Decomposition",("S Graph"),0.24
+"C Heavy-Light Decomposition",("S Lowest Common Ancestor";"S Graph";"S Tree";"S Segment Tree";"S Binary Lifting";"S Euler Tour"),0.09
+"C Heavy-Light Decomposition",("S Lowest Common Ancestor"),0.12
+"C Heavy-Light Decomposition",("S Segment Tree"),0.29
+"C Heavy-Light Decomposition",("S Tree"),0.71
+"C Heavy-Light Decomposition",(NOT "S Cyclic Shift"),0.2
+"C Intersection of Segments",("S Geometry";"S Intersection Point of Lines";"S Vector";"S Two-Dimesional Plane"),0.07
+"C Intersection of Segments",("S Geometry"),0.34
+"C Intersection of Segments",("S Intersection Point of Lines"),0.98
+"C Intersection of Segments",("S Two-Dimesional Plane"),0.91
+"C Intersection of Segments",("S Vector"),0.88
+"C Intersection of Segments",(NOT "S Primality Tests"),0.54
+"C Intersection Point of Lines",("S Equation System"),0.11
+"C Intersection Point of Lines",("S Geometry";"S Equation System";"S Vector";"S Two-Dimesional Plane"),0.03
+"C Intersection Point of Lines",("S Geometry"),0.86
+"C Intersection Point of Lines",("S Two-Dimesional Plane"),0.6
+"C Intersection Point of Lines",("S Vector"),0.5
+"C Intersection Point of Lines",(NOT "S Greatest Common Divisor"),0.17
+"C K-Combinations",("S Binomial Coefficient"),0.48
+"C K-Combinations",("S Combinatory";"S Binomial Coefficient";"S Factorial"),0.07
+"C K-Combinations",("S Combinatory"),0.15
+"C K-Combinations",("S Factorial"),0.49
+"C K-Combinations",(NOT "S Dinic"),0.49
+"C Kirchhoff Theorem",("S Connected Undirected Graph"),0.51
+"C Kirchhoff Theorem",("S Graph";"S Connected Undirected Graph";"S Minimum Spanning Tree"),0.05
+"C Kirchhoff Theorem",("S Graph"),0.61
+"C Kirchhoff Theorem",("S Minimum Spanning Tree"),0.48
+"C Kirchhoff Theorem",(NOT "S Factorial"),0.54
+"C Knuth-Morris-Pratt",("S Array"),0.27
+"C Knuth-Morris-Pratt",("S KMP";"S String Comparing";"S Pattern Matching";"S String Searching";"S Array";"S Preffix Function"),0.08
+"C Knuth-Morris-Pratt",("S KMP"),0.82
+"C Knuth-Morris-Pratt",("S Pattern Matching"),0.75
+"C Knuth-Morris-Pratt",("S Preffix Function"),0.76
+"C Knuth-Morris-Pratt",("S String Comparing"),0.67
+"C Knuth-Morris-Pratt",("S String Searching"),0.69
+"C Knuth-Morris-Pratt",(NOT "S Li Chao Tree"),0.73
+"C Knuth's Optimization",("S Dynamic Programming";"S Mininum Cost";"S Optimization"),0.08
+"C Knuth's Optimization",("S Dynamic Programming"),0.99
+"C Knuth's Optimization",("S Mininum Cost"),0.9
+"C Knuth's Optimization",("S Optimization"),0.42
+"C Knuth's Optimization",(NOT "S Modular Multiplicative Inverse"),0.29
+"C Kruskal",("S Connected Graph"),0.65
+"C Kruskal",("S Dense Graph"),0.48
+"C Kruskal",("S Disjoint Set Union"),0.48
+"C Kruskal",("S Graph"),0.58
+"C Kruskal",("S Minimal Cost"),0.3
+"C Kruskal",("S Minimum Spanning Tree";"S Graph";"S Undirected Unweighted Graph";"S Minimal Cost";"S Connected Graph";"S Dense Graph";"S Sparse Graph";"S Disjoint Set Union"),0.02
+"C Kruskal",("S Minimum Spanning Tree"),0.6
+"C Kruskal",("S Sparse Graph"),0.55
+"C Kruskal",("S Undirected Unweighted Graph"),0.86
+"C Kruskal",(NOT "S String Searching"),0.59
+"C Kuhn's Algorithm",("S Bipartite Graph"),0.78
+"C Kuhn's Algorithm",("S Breadth First Search"),0.37
+"C Kuhn's Algorithm",("S Depth First Search"),0.23
+"C Kuhn's Algorithm",("S Disjoint Set Union"),0.72
+"C Kuhn's Algorithm",("S Graph";"S Bipartite Graph";"S Maximum Match";"S Disjoint Set Union";"S Breadth First Search";"S Depth First Search"),0.1
+"C Kuhn's Algorithm",("S Graph"),0.92
+"C Kuhn's Algorithm",("S Maximum Match"),0.13
+"C Kuhn's Algorithm",(NOT "S Circle-Line Intersection"),0.46
+"C Li Chao Tree",("S Array"),0.57
+"C Li Chao Tree",("S Convex Hull Trick"),0.35
+"C Li Chao Tree",("S Geometry";"S Convex Hull Trick";"S Vector";"S Segment Tree";"S Array"),0.09
+"C Li Chao Tree",("S Geometry"),0.95
+"C Li Chao Tree",("S Segment Tree"),0.72
+"C Li Chao Tree",("S Vector"),0.09
+"C Li Chao Tree",(NOT "S Minimum Stack/Minimum Queue"),0.48
+"C Linear Diophantine Equations",("S Coprime"),0.2
+"C Linear Diophantine Equations",("S Diophantine Equation"),0.42
+"C Linear Diophantine Equations",("S Euclidian Algorithm"),0.33
+"C Linear Diophantine Equations",("S Greatest Common Divisor"),0.03
+"C Linear Diophantine Equations",("S Integer Roots"),0.85
+"C Linear Diophantine Equations",("S Modular Inverse";"S Coprime";"S Euclidian Algorithm";"S Diophantine Equation";"S Integer Roots";"S Greatest Common Divisor"),0.05
+"C Linear Diophantine Equations",("S Modular Inverse"),0.02
+"C Linear Diophantine Equations",(NOT "S Nim"),0.94
+"C Longest Increasing Subsequence",("S Array"),0.78
+"C Longest Increasing Subsequence",("S Binary Search"),0.9
+"C Longest Increasing Subsequence",("S Dynamic Programming";"S Array";"S Maximum Value";"S Binary Search";"S Segment Tree";"S Fenwick Tree"),0.08
+"C Longest Increasing Subsequence",("S Dynamic Programming"),0.58
+"C Longest Increasing Subsequence",("S Fenwick Tree"),0.82
+"C Longest Increasing Subsequence",("S Maximum Value"),0.31
+"C Longest Increasing Subsequence",("S Segment Tree"),0.09
+"C Longest Increasing Subsequence",(NOT "S Bitwise Operations"),0.24
+"C Lowest Common Ancestor",("S Depth First Search"),0.63
+"C Lowest Common Ancestor",("S Euler Tour"),0.64
+"C Lowest Common Ancestor",("S Graph";"S Tree";"S Depth First Search";"S Euler Tour";"S Single Source Shortest Path";"S SQRT Decomposition";"S Segment Tree";"S Sparse Table"),0.02
+"C Lowest Common Ancestor",("S Graph"),0.52
+"C Lowest Common Ancestor",("S Segment Tree"),0.04
+"C Lowest Common Ancestor",("S Single Source Shortest Path"),0.15
+"C Lowest Common Ancestor",("S Sparse Table"),0.56
+"C Lowest Common Ancestor",("S SQRT Decomposition"),0.91
+"C Lowest Common Ancestor",("S Tree"),0.98
+"C Lowest Common Ancestor",(NOT "S Least Common Multiple"),0.73
+"C Maximum Flow",("S Directed Graph"),0.77
+"C Maximum Flow",("S Flow Network"),0.73
+"C Maximum Flow",("S Graph";"S Maximal Flow";"S Directed Graph";"S Flow Network"),0.01
+"C Maximum Flow",("S Graph"),0.47
+"C Maximum Flow",("S Maximal Flow"),0.27
+"C Maximum Flow",(NOT "S Chinese Remainder Theorem"),0.44
+"C Minimum Spanning Tree",("S Connected Graph"),0.48
+"C Minimum Spanning Tree",("S Dense Graph"),0.83
+"C Minimum Spanning Tree",("S Disjoint Set Union"),0.98
+"C Minimum Spanning Tree",("S Graph";"S Undirected Unweighted Graph";"S Minimal Cost";"S Connected Graph";"S Dense Graph";"S Sparse Graph";"S Kruskal";"S Disjoint Set Union";"S Lowest Common Ancestor"),0.05
+"C Minimum Spanning Tree",("S Graph"),0.22
+"C Minimum Spanning Tree",("S Kruskal"),0.25
+"C Minimum Spanning Tree",("S Lowest Common Ancestor"),0.32
+"C Minimum Spanning Tree",("S Minimal Cost"),0.95
+"C Minimum Spanning Tree",("S Sparse Graph"),0.29
+"C Minimum Spanning Tree",("S Undirected Unweighted Graph"),0.06
+"C Minimum Spanning Tree",(NOT "S Aho-Corasick"),0.9
+"C Minimum Stack/Minimum Queue",("S Array"),0.46
+"C Minimum Stack/Minimum Queue",("S Data Structure";"S Stack";"S Queue";"S Array";"S Minimum Value"),0.08
+"C Minimum Stack/Minimum Queue",("S Data Structure"),0.11
+"C Minimum Stack/Minimum Queue",("S Minimum Value"),0.09
+"C Minimum Stack/Minimum Queue",("S Queue"),0.08
+"C Minimum Stack/Minimum Queue",("S Stack"),0.71
+"C Minimum Stack/Minimum Queue",(NOT "S Primality Tests"),0.49
+"C Minimum-Cost Flow",("S Bellman-Ford"),0.86
+"C Minimum-Cost Flow",("S Dijkstra"),0.88
+"C Minimum-Cost Flow",("S Dinic"),0.98
+"C Minimum-Cost Flow",("S Directed Graph"),0.89
+"C Minimum-Cost Flow",("S Graph";"S Maximum Flow";"S Directed Graph";"S Shortest Path";"S Undirected Graph";"S Bellman-Ford";"S Dijkstra";"S Dinic"),0.1
+"C Minimum-Cost Flow",("S Graph"),0.36
+"C Minimum-Cost Flow",("S Maximum Flow"),0.41
+"C Minimum-Cost Flow",("S Shortest Path"),0.86
+"C Minimum-Cost Flow",("S Undirected Graph"),0.33
+"C Minimum-Cost Flow",(NOT "S Modular Operations"),0.09
+"C Modular Multiplicative Inverse",("S Binary Exponentiation"),0.4
+"C Modular Multiplicative Inverse",("S Congruence"),0.95
+"C Modular Multiplicative Inverse",("S Extended Euclidian Algorithm"),0.9
+"C Modular Multiplicative Inverse",("S Greatest common divisor"),0.01
+"C Modular Multiplicative Inverse",("S Linear Diophantine Equation"),0.6
+"C Modular Multiplicative Inverse",("S Relative Primes";"S Linear Diophantine Equation";"S Greatest common divisor";"S Binary Exponentiation";"S Congruence";"S Extended Euclidian Algorithm"),0.06
+"C Modular Multiplicative Inverse",("S Relative Primes"),0.91
+"C Modular Multiplicative Inverse",(NOT "S Geometry"),0.04
+"C Nim",("S Bitwise Operation"),0.95
+"C Nim",("S Dynamic Programming";"S Perfect Information";"S Finite Game";"S Xor-Sum";"S Bitwise Operation";"S Game Theory"),0.09
+"C Nim",("S Dynamic Programming"),0.01
+"C Nim",("S Finite Game"),0.51
+"C Nim",("S Game Theory"),0.35
+"C Nim",("S Perfect Information"),0.03
+"C Nim",("S Xor-Sum"),0.34
+"C Nim",(NOT "S Geometry"),0.48
+"C Preffix Function",("S Array"),0.52
+"C Preffix Function",("S Knuth-Morris-Pratt"),0.21
+"C Preffix Function",("S Pattern Matching"),0.9
+"C Preffix Function",("S String Comparing";"S Pattern Matching";"S String Searching";"S Array";"S Knuth-Morris-Pratt"),0.07
+"C Preffix Function",("S String Comparing"),0.61
+"C Preffix Function",("S String Searching"),0.78
+"C Preffix Function",(NOT "S Sieve of Eratosthenes"),0.28
+"C Prim's Algorithm",("S Connected Graph"),0.73
+"C Prim's Algorithm",("S Dense Graph"),0.21
+"C Prim's Algorithm",("S Graph"),0.49
+"C Prim's Algorithm",("S Minimal Cost"),0.51
+"C Prim's Algorithm",("S Minimum Spanning Tree";"S Graph";"S Undirected Unweighted Graph";"S Minimal Cost";"S Connected Graph";"S Dense Graph";"S Sparse Graph"),0.1
+"C Prim's Algorithm",("S Minimum Spanning Tree"),0.38
+"C Prim's Algorithm",("S Sparse Graph"),0.19
+"C Prim's Algorithm",("S Undirected Unweighted Graph"),0.46
+"C Prim's Algorithm",(NOT "S Divisors"),0.78
+"C Primality Tests",("S Binary Exponentiation"),0.27
+"C Primality Tests",("S Fermat"),0.09
+"C Primality Tests",("S Miller-Rabin"),0.24
+"C Primality Tests",("S Modular Division"),0.8
+"C Primality Tests",("S Prime Numbers";"S Fermat";"S Modular Division";"S Miller-Rabin";"S Binary Exponentiation"),0.05
+"C Primality Tests",("S Prime Numbers"),0.89
+"C Primality Tests",(NOT "S Game Theory"),0.44
+"C Segment Tree",("S Array"),0.64
+"C Segment Tree",("S Binary Tree"),0.88
+"C Segment Tree",("S Data Structure";"S Tree";"S Array";"S Divide and Conquer";"S Binary Tree";"S Lazy Propagation"),0.02
+"C Segment Tree",("S Data Structure"),0.23
+"C Segment Tree",("S Divide and Conquer"),0.04
+"C Segment Tree",("S Lazy Propagation"),0.36
+"C Segment Tree",("S Tree"),0.79
+"C Segment Tree",(NOT "S Miller-Rabin"),0.16
+"C Sieve of Eratosthenes",("S Composite Numbers"),0.64
+"C Sieve of Eratosthenes",("S Divisible Numbers"),0.99
+"C Sieve of Eratosthenes",("S Divisors"),0.64
+"C Sieve of Eratosthenes",("S Prime Numbers";"S Composite Numbers";"S Divisible Numbers";"S Divisors"),0.01
+"C Sieve of Eratosthenes",("S Prime Numbers"),0.77
+"C Sieve of Eratosthenes",(NOT "S Tree"),0.57
+"C Sprague-Grundy Theorem",("S Game Theory"),0.21
+"C Sprague-Grundy Theorem",("S Nim";"S Game Theory"),0.08
+"C Sprague-Grundy Theorem",("S Nim"),0.49
+"C Sprague-Grundy Theorem",(NOT "S Two-Dimesional Plane"),0.91
+"C Sqrt Decomposition",("S Array"),0.42
+"C Sqrt Decomposition",("S Data Structure"),0.98
+"C Sqrt Decomposition",("S Divide and Conquer"),0.89
+"C Sqrt Decomposition",("S Maximal"),0.56
+"C Sqrt Decomposition",("S Minimal";"S Maximal";"S Array";"S Divide and Conquer";"S Data Structure"),0.07
+"C Sqrt Decomposition",("S Minimal"),0.35
+"C Sqrt Decomposition",(NOT "S Graph"),0.86
+"C Stars and Bars",("S Binomial Coefficients"),0.09
+"C Stars and Bars",("S Combinatory";"S Binomial Coefficients";"S Modular Operations";"S Factorial"),0.1
+"C Stars and Bars",("S Combinatory"),0.56
+"C Stars and Bars",("S Factorial"),0.82
+"C Stars and Bars",("S Modular Operations"),0.25
+"C Stars and Bars",(NOT "S Kirchhoff Theorem"),0.28
+"C Strongly Connected Components",("S Acyclic Graph"),0.08
+"C Strongly Connected Components",("S Breadth First Search"),0.88
+"C Strongly Connected Components",("S Depth First Search"),0.11
+"C Strongly Connected Components",("S Directed Graph"),0.68
+"C Strongly Connected Components",("S Graph";"S Directed Graph";"S Subset";"S Acyclic Graph";"S Depth First Search";"S Breadth First Search"),0.01
+"C Strongly Connected Components",("S Graph"),0.61
+"C Strongly Connected Components",("S Subset"),0.25
+"C Strongly Connected Components",(NOT "S Line Equation"),0.56
+"C Suffix Array",("S Array";"S String Matching";"S Modular Operations";"S String Comparing";"S Longest Common Prefix"),0.04
+"C Suffix Array",("S Array"),0.66
+"C Suffix Array",("S Longest Common Prefix"),0.06
+"C Suffix Array",("S Modular Operations"),0.62
+"C Suffix Array",("S String Comparing"),0.24
+"C Suffix Array",("S String Matching"),0.85
+"C Suffix Array",(NOT "S Stars and Bars"),0.12
+"C Suffix Automaton",("S Automaton"),0.19
+"C Suffix Automaton",("S Graph"),0.38
+"C Suffix Automaton",("S Largest Common Substring"),0.09
+"C Suffix Automaton",("S Longest Common Substring"),0.1
+"C Suffix Automaton",("S Pattern Matching"),0.25
+"C Suffix Automaton",("S String Comparing";"S Pattern Matching";"S Automaton";"S Graph";"S Longest Common Substring";"S Largest Common Substring"),0.1
+"C Suffix Automaton",("S String Comparing"),0.04
+"C Suffix Automaton",(NOT "S Nim"),0.77
+"C Suffix Tree",("S Graph"),0.64
+"C Suffix Tree",("S Pattern Matching"),0.73
+"C Suffix Tree",("S String Comparing"),0.25
+"C Suffix Tree",("S Tree";"S Graph";"S String Comparing";"S Pattern Matching"),0.08
+"C Suffix Tree",("S Tree"),0.46
+"C Suffix Tree",(NOT "S Dijkstra"),0.79
+"C Ternary Search",("S Binary Search";"S Maximum Value";"S Minimal Cost"),0.05
+"C Ternary Search",("S Binary Search"),0.86
+"C Ternary Search",("S Maximum Value"),0.49
+"C Ternary Search",("S Minimal Cost"),0.54
+"C Ternary Search",(NOT "S Heavy-Light Decomposition"),0.15
+"C Topological Sorting",("S Acyclic Graph"),0.04
+"C Topological Sorting",("S Depth First Search"),0.42
+"C Topological Sorting",("S Directed Graph"),0.4
+"C Topological Sorting",("S Graph";"S Directed Graph";"S Permutation";"S Depth First Search";"S Acyclic Graph"),0.02
+"C Topological Sorting",("S Graph"),0.72
+"C Topological Sorting",("S Permutation"),0.13
+"C Topological Sorting",(NOT "S Divide and Conquer"),0.12
+"C Voronoi Diagram",("S Convex Hull Trick"),0.4
+"C Voronoi Diagram",("S Deulanay Triangulation"),0.45
+"C Voronoi Diagram",("S Divide and Conquer"),0.99
+"C Voronoi Diagram",("S Geometry";"S Polygons";"S Deulanay Triangulation";"S Convex Hull Trick";"S Divide and Conquer"),0.06
+"C Voronoi Diagram",("S Geometry"),0.53
+"C Voronoi Diagram",("S Polygons"),0.27
+"C Voronoi Diagram",(NOT "S Z-Function"),0.44
+"C Z-Function",("S Array"),0.98
+"C Z-Function",("S Pattern Matching"),0.41
+"C Z-Function",("S String Comparing";"S Pattern Matching";"S String Searching";"S Array"),0.07
+"C Z-Function",("S String Comparing"),0.78
+"C Z-Function",("S String Searching"),0.5
+"C Z-Function",(NOT "S Voronoi Diagram"),0.57
