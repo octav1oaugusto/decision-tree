@@ -11,14 +11,13 @@ class TreeNode:
         self.right = right
 
 
-def build_decision_tree(rules, discarded_symptoms=None):
-    if discarded_symptoms is None:
-        discarded_symptoms = set()
-
-    if not rules or len(discarded_symptoms) == len(set(symptom for _, symptoms, _ in rules for symptom in symptoms)):
+def build_decision_tree(rules, discarded_symptoms=set()):
+    considered_symptoms = set(symptom for _, symptoms, _ in rules for symptom in symptoms)
+    if len(discarded_symptoms) >= len(considered_symptoms):
+        # aqui vai a causa
         return None
 
-    valid_symptoms = set(symptom for _, symptoms, _ in rules for symptom in symptoms) - discarded_symptoms
+    valid_symptoms = considered_symptoms - discarded_symptoms
     best_symptom = max(valid_symptoms, key=lambda x: information_gain(x, rules))
 
     rules_with_symptom = [rule for rule in rules if best_symptom in rule[1]]
@@ -39,7 +38,7 @@ def information_gain(symptom, rules):
 
     return gain
 
-
+# unicamente pra debug
 def print_tree(node, depth=0):
     if node is not None:
         print("  " * depth, end="")
@@ -51,20 +50,17 @@ def print_tree(node, depth=0):
         print_tree(node.right, depth + 1)
 
 
+def tree_data(tree, id= 1):
+    return {"id" : id,
+            "label" : "Root Node" if id == 1 else f"Child Node {id}.x",
+            "children" : [tree_data(tree.left, (2*id)), tree_data(tree.right, (2*id) + 1)],}
+
+def get_tree_data():
+    return tree_data(build_decision_tree(get_rules()))
+
 #parse_rules() : [("Causa", [Condition("cond", not:bool)], 0.55f)]
-rules = [
-    ("C 2-SAT", ["And"], 0.55),
-    ("C Binary Lifting",["-Lowest Common Ancestor"],0.42),
-    ("C Catalan Numbers",["Modular Operations"],0.66),
-]
 
-print(get_rules())
-print(
-    Condition("2-SAT") == Condition("2-SAT"),
-    Condition("2-SAT", True) == Condition("2-SAT", True),
-    Condition("Binary Lifting") == Condition("2-SAT"),
-    Condition("2-SAT", True) == Condition("2-SAT")
-)
-
-decision_tree = build_decision_tree(rules)
-print_tree(decision_tree)
+if __name__ == "__main__":
+    rules = get_rules()
+    decision_tree = build_decision_tree(rules)
+    print_tree(decision_tree)
