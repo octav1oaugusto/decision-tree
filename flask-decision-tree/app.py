@@ -13,6 +13,7 @@ def get_root():
     return 'This is the main route (/api).'
 
 # Route for GET method "/api/tree"
+@cross_origin(supports_credentials=True)
 @app.route('/api/tree', methods=['GET'])
 def get_tree():
     tree_data = get_tree_data()
