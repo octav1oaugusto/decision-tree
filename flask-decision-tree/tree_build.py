@@ -1,5 +1,5 @@
-from files import get_rules
-from files import parse_solutions as get_solutions
+from files import parse_rules as get_rules
+from files import get_solutions
 from conditions import Condition
 
 class TreeNode:
@@ -64,7 +64,7 @@ def tree_data(tree, id= '0'):
             #"icon" : questionmark if tree.left or tree.right else exclamationmark
             "children" : [tree_data(tree.left, id+'-0') if type(tree.left) is not list else get_leaves(tree.left, id+'-0'), 
                           tree_data(tree.right, id+'-1') if type(tree.right) is not list else get_leaves(tree.right, id+'-1')]}
-    if len(ret["children"]) == 1:
+    while len(ret["children"]) == 1 and type(ret["children"][0]) == list:
         ret["children"] = ret["children"][0]
     for i in range(len(ret["children"])):
         if ret["children"][i] == None:
