@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { readFileContent } from '../utils/utils';
+import { MessageService } from 'primeng/api';
 import { DecisionTreeService } from '../providers/decision-tree.service';
 
 @Component({
@@ -9,7 +9,10 @@ import { DecisionTreeService } from '../providers/decision-tree.service';
 })
 export class Component1Component implements OnInit {
   @ViewChild('fileInput') fileInput!: ElementRef;
-  constructor(public treeService: DecisionTreeService) {}
+  constructor(
+    public treeService: DecisionTreeService,
+    private messageService: MessageService
+  ) {}
 
   public decisionTreeService: DecisionTreeService;
 
@@ -20,9 +23,18 @@ export class Component1Component implements OnInit {
       const inputElement = this.fileInput.nativeElement;
 
       const file = inputElement.files?.[0];
-      this.treeService.uploadRules(file).subscribe(data => {
-        console.log('Uploaded. Response: ', data)
+      this.treeService.uploadRules(file).subscribe((data) => {
+        console.log('Uploaded. Response: ', data);
       });
     }
+  }
+
+  onUpload(event: any) {
+    console.log(event);
+    this.messageService.add({
+      severity: 'info',
+      summary: 'Success',
+      detail: 'File Uploaded with Basic Mode',
+    });
   }
 }

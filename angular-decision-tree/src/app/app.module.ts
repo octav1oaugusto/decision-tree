@@ -6,7 +6,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
+import { FileUploadModule } from 'primeng/fileupload';
+import { ToastModule } from 'primeng/toast';
 import { TreeModule } from 'primeng/tree';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +19,6 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { DecisionTreeService } from './providers/decision-tree.service';
 import { TreeDiagramComponent } from './tree-diagram/tree-diagram.component';
 import { TreeNodeComponent } from './tree-node/tree-node.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +40,10 @@ import { TreeNodeComponent } from './tree-node/tree-node.component';
     HttpClientModule,
     TreeModule,
     ButtonModule,
+    FileUploadModule,
+    ToastModule,
   ],
-  providers: [DecisionTreeService],
+  providers: [DecisionTreeService, MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
