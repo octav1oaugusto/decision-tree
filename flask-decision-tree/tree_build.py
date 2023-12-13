@@ -56,6 +56,7 @@ def get_leaves(leaves, id, right):
         ret.append({"key" : id+str(2*i + right), "label" : str(leaves[i])})
     if ret:
         return ret
+    return None
 
 
 def tree_data(tree, id= '0'):
