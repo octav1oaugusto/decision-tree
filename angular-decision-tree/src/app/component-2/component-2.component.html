@@ -1,3 +1,11 @@
-<div class="tree">
+<!-- <div class="tree">
   <app-tree-node [node]="treeData"></app-tree-node>
+</div> -->
+
+<div class="mb-3">
+  <button pButton type="button" label="Expand all" (click)="expandAll()"
+    class="mr-2"></button>
+  <button pButton type="button" label="Collapse all"
+    (click)="collapseAll()"></button>
 </div>
+<p-tree [value]="files" class="w-full md:w-30rem"></p-tree>
