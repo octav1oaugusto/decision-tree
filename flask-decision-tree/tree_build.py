@@ -65,7 +65,7 @@ def tree_data(tree, id= '0'):
                           tree_data(tree.right, id+'-1') if type(tree.right) is not list else get_leaves(tree.right, id, 3)]}
 
 def get_tree_data():
-    return tree_data(build_decision_tree(get_rules()))
+    return [tree_data(build_decision_tree(get_rules()))]
 
 #parse_rules() : [("Causa", [Condition("cond", not:bool)], 0.55f)]
 
