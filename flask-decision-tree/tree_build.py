@@ -51,6 +51,8 @@ def print_tree(node, depth=0):
         print_tree(node.right, depth + 1)
 
 def get_leaves(leaves, id):
+    if leaves:
+        return str(leaves[0])
     ret = []
     for i in range(len(leaves)):
         ret.append({"key" : id, "label" : str(leaves[i])})
