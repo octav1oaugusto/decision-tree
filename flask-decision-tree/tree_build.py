@@ -50,21 +50,24 @@ def print_tree(node, depth=0):
         print_tree(node.left, depth + 1)
         print_tree(node.right, depth + 1)
 
-def get_leaves(leaves, id, right):
+def get_leaves(leaves, id):
     ret = []
     for i in range(len(leaves)):
-        ret.append({"key" : id+'-'+str(2*i + right), "label" : str(leaves[i])})
+        ret.append({"key" : id, "label" : str(leaves[i])})
     if ret:
         return ret
-    return 
 
 
 def tree_data(tree, id= '0'):
-    return {"key" : id,
+    ret = {"key" : id,
             "label" : str(tree.symptom) if tree.left or tree.right else 'Resposta: ',
             #"icon" : questionmark if tree.left or tree.right else exclamationmark
-            "children" : [tree_data(tree.left, id+'-0') if type(tree.left) is not list else get_leaves(tree.left, id, 2) if type(tree.left) is list else '', 
-                          tree_data(tree.right, id+'-1') if type(tree.right) is not list else get_leaves(tree.right, id, 3) if type(tree.right) is list else '']}
+            "children" : [tree_data(tree.left, id+'-0') if type(tree.left) is not list else get_leaves(tree.left, id+'-0'), 
+                          tree_data(tree.right, id+'-1') if type(tree.right) is not list else get_leaves(tree.right, id+'-1')]}
+    for i in range(len(ret["children"])):
+        if ret["children"][i] == None:
+            ret["children"].pop(i)
+    return ret
 
 def get_tree_data():
     return [tree_data(build_decision_tree(get_rules()))]
