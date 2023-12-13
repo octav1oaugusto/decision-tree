@@ -7,7 +7,7 @@ class Condition:
     self.id = id
     self._not = _not
   def __str__(self):
-    return f"{"NOT " if self._not else ""}\"{self.id}\""
+    return f"\"{self.id}\""
   def __eq__(self, other):
     return self.id == other.id and self._not == other._not
   def __ne__(self, other):
