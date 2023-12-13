@@ -56,15 +56,15 @@ def get_leaves(leaves, id, right):
         ret.append({"key" : id+'-'+str(2*i + right), "label" : str(leaves[i])})
     if ret:
         return ret
-    return None
+    return 
 
 
 def tree_data(tree, id= '0'):
     return {"key" : id,
             "label" : str(tree.symptom) if tree.left or tree.right else 'Resposta: ',
             #"icon" : questionmark if tree.left or tree.right else exclamationmark
-            "children" : [tree_data(tree.left, id+'-0') if type(tree.left) is not list else get_leaves(tree.left, id, 2), 
-                          tree_data(tree.right, id+'-1') if type(tree.right) is not list else get_leaves(tree.right, id, 3)]}
+            "children" : [tree_data(tree.left, id+'-0') if type(tree.left) is not list else get_leaves(tree.left, id, 2) if type(tree.left) is list else '', 
+                          tree_data(tree.right, id+'-1') if type(tree.right) is not list else get_leaves(tree.right, id, 3) if type(tree.right) is list else '']}
 
 def get_tree_data():
     return [tree_data(build_decision_tree(get_rules()))]
