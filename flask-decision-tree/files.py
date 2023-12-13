@@ -11,7 +11,10 @@ def parse_file(filename):
         return [line.split(',') for line in lines]
 
 def get_rules():
-    return FileStorage.instance().get_rules()
+    fs = FileStorage.instance()
+    if not fs.rules:
+        return fs.set_rules_from_file(RULES_FILE)
+    return fs.get_rules()
 
 def parse_rules(lines):
     rules = []
