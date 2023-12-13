@@ -13,4 +13,8 @@ export class DecisionTreeService {
   getTree(): Observable<any> {
     return this.http.get(`${this.apiUrl}/tree`);
   }
+
+  uploadRules(file: File): Observable<any> {
+    return this.http.post(`${this.apiUrl}/file`, file);
+  }
 }

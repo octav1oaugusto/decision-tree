@@ -1,4 +1,4 @@
-from files import parse_rules as get_rules
+from files import get_rules
 from files import parse_solutions as get_solutions
 from conditions import Condition
 

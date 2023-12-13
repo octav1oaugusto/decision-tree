@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { readFileContent } from '../utils/utils';
+import { DecisionTreeService } from '../providers/decision-tree.service';
 
 @Component({
   selector: 'app-component-1',
@@ -8,7 +9,9 @@ import { readFileContent } from '../utils/utils';
 })
 export class Component1Component implements OnInit {
   @ViewChild('fileInput') fileInput!: ElementRef;
-  constructor() {}
+  constructor(public treeService: DecisionTreeService) {}
+
+  public decisionTreeService: DecisionTreeService;
 
   ngOnInit() {}
 
@@ -16,12 +19,9 @@ export class Component1Component implements OnInit {
     if (this.fileInput && this.fileInput.nativeElement) {
       const inputElement = this.fileInput.nativeElement;
 
-      readFileContent(inputElement, (content) => {
-        if (content !== null) {
-          console.log('File content:', content);
-        } else {
-          console.log('No file selected');
-        }
+      const file = inputElement.files?.[0];
+      this.treeService.uploadRules(file).subscribe(data => {
+        console.log('Uploaded. Response: ', data)
       });
     }
   }
