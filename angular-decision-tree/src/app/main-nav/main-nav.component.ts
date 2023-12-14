@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'main-nav',
@@ -7,15 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainNavComponent implements OnInit {
   sidenavWidth = 4;
+  items: MenuItem[] | undefined;
+  sidebarVisible: boolean = false;
 
   constructor() {}
 
-  ngOnInit() {}
-
-  increase() {
-    this.sidenavWidth = 15;
+  ngOnInit() {
+    this.getItems();
   }
-  decrease() {
-    this.sidenavWidth = 4;
+
+  getItems() {
+    this.items = [
+      {
+        label: 'Menu',
+        items: [
+          {
+            label: 'File Upload',
+            icon: 'pi pi-external-link',
+            routerLink: '/file-upload',
+          },
+          {
+            label: 'Tree Diagram',
+            icon: 'pi pi-upload',
+            routerLink: '/tree-diagram',
+          },
+        ],
+      },
+    ];
   }
 }

@@ -6,7 +6,7 @@ import { Component2Component } from './component-2/component-2.component';
 const appRoutes: Routes = [
   { path: 'file-upload', component: Component1Component },
   { path: 'tree-diagram', component: Component2Component },
-  { path: '', redirectTo: '/file-upload', pathMatch: 'full' },
+  { path: '', redirectTo: '/#', pathMatch: 'full' },
   { path: '**', component: Component1Component },
 ];
 
