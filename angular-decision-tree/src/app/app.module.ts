@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { FileUploadModule } from 'primeng/fileupload';
+import { MenuModule } from 'primeng/menu';
+import { SidebarModule } from 'primeng/sidebar';
 import { ToastModule } from 'primeng/toast';
 import { TreeModule } from 'primeng/tree';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +21,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { DecisionTreeService } from './providers/decision-tree.service';
 import { TreeDiagramComponent } from './tree-diagram/tree-diagram.component';
 import { TreeNodeComponent } from './tree-node/tree-node.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +45,8 @@ import { TreeNodeComponent } from './tree-node/tree-node.component';
     ButtonModule,
     FileUploadModule,
     ToastModule,
+    SidebarModule,
+    MenuModule,
   ],
   providers: [DecisionTreeService, MessageService],
   bootstrap: [AppComponent],
