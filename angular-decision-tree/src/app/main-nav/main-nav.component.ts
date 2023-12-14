@@ -24,12 +24,12 @@ export class MainNavComponent implements OnInit {
         items: [
           {
             label: 'File Upload',
-            icon: 'pi pi-external-link',
+            icon: 'pi pi-file-excel',
             routerLink: '/file-upload',
           },
           {
             label: 'Tree Diagram',
-            icon: 'pi pi-upload',
+            icon: 'pi pi-server',
             routerLink: '/tree-diagram',
           },
         ],
