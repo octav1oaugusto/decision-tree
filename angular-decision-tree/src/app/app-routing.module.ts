@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Component1Component } from './component-1/component-1.component';
-import { Component2Component } from './component-2/component-2.component';
+import { FileUploadComponent } from './file-upload-component/file-upload.component';
+import { TreeDiagramComponent } from './tree-diagram-component/tree-diagram.component';
 
 const appRoutes: Routes = [
-  { path: 'file-upload', component: Component1Component },
-  { path: 'tree-diagram', component: Component2Component },
+  { path: 'file-upload', component: FileUploadComponent },
+  { path: 'tree-diagram', component: TreeDiagramComponent },
   { path: '', redirectTo: '/#', pathMatch: 'full' },
-  { path: '**', component: Component1Component },
+  { path: '**', component: FileUploadComponent },
 ];
 
 @NgModule({

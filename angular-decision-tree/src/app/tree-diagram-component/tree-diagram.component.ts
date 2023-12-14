@@ -3,11 +3,11 @@ import { TreeNode } from 'primeng/api';
 import { DecisionTreeService } from '../providers/decision-tree.service';
 
 @Component({
-  selector: 'app-component-2',
-  templateUrl: './component-2.component.html',
-  styleUrls: ['./component-2.component.css'],
+  selector: 'tree-diagram',
+  templateUrl: './tree-diagram.component.html',
+  styleUrls: ['./tree-diagram.component.css'],
 })
-export class Component2Component implements OnInit {
+export class TreeDiagramComponent implements OnInit {
   constructor(public treeService: DecisionTreeService) {}
 
   public decisionTreeService: DecisionTreeService;
@@ -16,7 +16,6 @@ export class Component2Component implements OnInit {
 
   ngOnInit() {
     this.getTreeData();
-    // this.nodeService.getFiles().then((data) => (this.files = data));
   }
 
   getTreeData() {

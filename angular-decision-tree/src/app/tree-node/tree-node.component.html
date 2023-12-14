@@ -1,7 +1,0 @@
-<div class="node">
-  {{ node.label }}
-  <div *ngIf="node.children && node.children.length > 0" class="children">
-    <app-tree-node *ngFor="let child of node.children"
-      [node]="child"></app-tree-node>
-  </div>
-</div>

@@ -3,11 +3,11 @@ import { MessageService } from 'primeng/api';
 import { DecisionTreeService } from '../providers/decision-tree.service';
 
 @Component({
-  selector: 'app-component-1',
-  templateUrl: './component-1.component.html',
-  styleUrls: ['./component-1.component.css'],
+  selector: 'file-upload',
+  templateUrl: './file-upload.component.html',
+  styleUrls: ['./file-upload.component.css'],
 })
-export class Component1Component implements OnInit {
+export class FileUploadComponent implements OnInit {
   @ViewChild('fileInput') fileInput!: ElementRef;
   constructor(
     public treeService: DecisionTreeService,
