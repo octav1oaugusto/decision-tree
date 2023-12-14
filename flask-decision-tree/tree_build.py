@@ -51,8 +51,6 @@ def print_tree(node, depth=0):
         print_tree(node.right, depth + 1)
 
 def get_leaves(leaves, id):
-    if leaves:
-        return {"key" : id, "label" : str(leaves[0])}
     ret = []
     for i in range(len(leaves)):
         ret.append({"key" : id, "label" : str(leaves[i])})
@@ -66,6 +64,11 @@ def tree_data(tree, id= '0'):
             #"icon" : questionmark if tree.left or tree.right else exclamationmark
             "children" : [tree_data(tree.left, id+'-0') if type(tree.left) is not list else get_leaves(tree.left, id+'-0'), 
                           tree_data(tree.right, id+'-1') if type(tree.right) is not list else get_leaves(tree.right, id+'-1')]}
+    if type(ret["children"][0]) == list:
+        ret["children"][0] = ret["children"][0][0]
+    if type(ret["children"][1]) == list:
+        ret["children"][1] = ret["children"][1][0]
+    
     for i in range(len(ret["children"])):
         if ret["children"][i] == None:
             ret["children"].pop(i)
