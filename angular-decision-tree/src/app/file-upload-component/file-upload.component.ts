@@ -2,6 +2,11 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { DecisionTreeService } from '../providers/decision-tree.service';
 
+interface UploadEvent {
+  originalEvent: Event;
+  files: File[];
+}
+
 @Component({
   selector: 'file-upload',
   templateUrl: './file-upload.component.html',
@@ -21,7 +26,7 @@ export class FileUploadComponent implements OnInit {
   onFileChange(): void {
     if (this.fileInput && this.fileInput.nativeElement) {
       const inputElement = this.fileInput.nativeElement;
-
+      console.log('F', inputElement);
       const file = inputElement.files?.[0];
       this.treeService.uploadRules(file).subscribe((data) => {
         console.log('Uploaded. Response: ', data);
@@ -30,7 +35,7 @@ export class FileUploadComponent implements OnInit {
   }
 
   onUpload(event: any) {
-    console.log(event);
+    console.log('g', event);
     this.messageService.add({
       severity: 'info',
       summary: 'Success',

@@ -1,5 +1,6 @@
 <div class="card flex justify-content-center">
   <p-toast></p-toast>
-  <p-fileUpload mode="basic" chooseLabel="Choose" name="demo" accept=".csv"
+  <p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]"
+    url="https://www.primefaces.org/cdn/api/upload.php" accept=".csv"
     (onUpload)="onUpload($event)"></p-fileUpload>
 </div>
