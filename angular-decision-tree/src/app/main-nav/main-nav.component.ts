@@ -32,6 +32,11 @@ export class MainNavComponent implements OnInit {
             icon: 'pi pi-server',
             routerLink: '/tree-diagram',
           },
+          {
+            label: 'Challenger',
+            icon: 'pi pi-book',
+            routerLink: '/challenger',
+          },
         ],
       },
     ];
