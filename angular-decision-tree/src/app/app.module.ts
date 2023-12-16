@@ -16,10 +16,10 @@ import { TreeModule } from 'primeng/tree';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChallengerComponent } from './challenger/challenger.component';
-import { FileUploadComponent } from './file-upload-component/file-upload.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { DecisionTreeService } from './providers/decision-tree.service';
-import { TreeDiagramComponent } from './tree-diagram-component/tree-diagram.component';
+import { TreeDiagramComponent } from './tree-diagram/tree-diagram.component';
 
 @NgModule({
   declarations: [
