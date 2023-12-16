@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SymptomsModel } from '../models/tree.model';
 import { DecisionTreeService } from '../providers/decision-tree.service';
+import { getSymptomsByTail } from '../utils/utils';
 
 interface Node {
   key: string;
@@ -19,11 +21,14 @@ class CurrentChildren {
 export class ChallengerComponent implements OnInit {
   constructor(private treeService: DecisionTreeService) {}
   node?: string;
+  question: string | undefined;
   data: Node[] = [];
+  lstSymptoms: SymptomsModel[] = [];
   currentChildren = new CurrentChildren();
   lastLeaf: boolean = false;
 
   ngOnInit() {
+    this.getSymptoms();
     this.getTreeData();
   }
 
@@ -34,6 +39,10 @@ export class ChallengerComponent implements OnInit {
     });
   }
 
+  getSymptoms() {
+    this.lstSymptoms = getSymptomsByTail();
+  }
+
   findLabelByKey(
     nodes: Node[],
     targetKey: string,
@@ -42,6 +51,8 @@ export class ChallengerComponent implements OnInit {
     for (const node of nodes) {
       const result = this.findLabelInNode(node, targetKey, currentChildren);
       if (result) {
+        console.log(result);
+        this.question = this.generateQuestion(result);
         return result;
       }
     }
@@ -92,6 +103,17 @@ export class ChallengerComponent implements OnInit {
         this.currentChildren.children[1].key,
         this.currentChildren
       );
+    }
+  }
+
+  generateQuestion(targetKey: string): string | undefined {
+    const key = targetKey.split('"')[1].trim();
+    const entry = this.lstSymptoms.find((item) => item.key === key);
+    console.log(entry);
+    if (entry) {
+      return `${entry.label} ${entry.key}?`;
+    } else {
+      return undefined;
     }
   }
 

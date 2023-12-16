@@ -9,3 +9,8 @@ export interface NodeModel {
   label: string;
   children?: Node[];
 }
+
+export interface SymptomsModel {
+  key: string;
+  label: string;
+}
