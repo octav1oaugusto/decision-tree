@@ -11,7 +11,7 @@ body {
   font-family: var(--font-family);
   font-weight: normal;
   background: var(--surface-ground);
-  background-image: url(assets/tree-backgroud.jpg);
+  background-image: url(assets/tree-background.jpg);
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
