@@ -11,6 +11,10 @@ body {
   font-family: var(--font-family);
   font-weight: normal;
   background: var(--surface-ground);
+  background-image: url(assets/tree-backgroud.jpg);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
   color: var(--text-color);
   padding: 1rem;
   -webkit-font-smoothing: antialiased;
@@ -18,7 +22,7 @@ body {
 }
 
 .card {
-  background: var(--surface-card);
+  background: rgba(255, 255, 255, 0.6);
   padding: 2rem;
   border-radius: 10px;
   margin-bottom: 1rem;
