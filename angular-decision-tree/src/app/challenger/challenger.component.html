@@ -1,4 +1,4 @@
-<div *ngIf="true; else resultLeaf">
+<div *ngIf="!lastLeaf; else resultLeaf">
   <div class="card">
     <div class="mb-3 flex justify-content-evenly flex-wrap">
       <b>Your program uses {{node}}?</b>
@@ -19,6 +19,12 @@
   <div class="card">
     <div class="mb-3 flex justify-content-evenly flex-wrap">
       <b>Result: {{node}}!</b>
+    </div>
+  </div>
+  <div class="card">
+    <div class="mb-3 flex justify-content-evenly flex-wrap">
+      <p-button label="Restart" [raised]="true"
+        (onClick)="restartButtonClick()"></p-button>
     </div>
   </div>
 </ng-template>

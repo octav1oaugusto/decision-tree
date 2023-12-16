@@ -57,6 +57,8 @@ export class ChallengerComponent implements OnInit {
     if (node.key === targetKey) {
       if (node.children) {
         currentChildren.children = node.children;
+      } else {
+        this.lastLeaf = true;
       }
       return node.label;
     }
@@ -91,5 +93,10 @@ export class ChallengerComponent implements OnInit {
         this.currentChildren
       );
     }
+  }
+
+  restartButtonClick() {
+    this.getTreeData();
+    this.lastLeaf = false;
   }
 }
