@@ -15,7 +15,7 @@ class TreeNode:
 
 def build_decision_tree(rules, discarded_symptoms=set()):
     considered_symptoms = set(symptom for _, symptoms, _ in rules for symptom in symptoms)
-    if len(discarded_symptoms) >= len(considered_symptoms):
+    if len(discarded_symptoms) >= len(considered_symptoms) or len(rules) == 1:
         return [TreeNode(cause= rule[0], probability=rule[2]) for rule in rules]
 
     valid_symptoms = considered_symptoms - discarded_symptoms
@@ -32,7 +32,7 @@ def build_decision_tree(rules, discarded_symptoms=set()):
 
 def information_gain(symptom, rules):
     total_prob = sum(rule[2] for rule in rules)
-    prob_with_symptom = sum(rule[2] for rule in rules if symptom in rule[1])
+    prob_with_symptom = sum(rule[2] for rule in rules if symptom in rule[1] or symptom.not_it() in rule[1])
     prob_without_symptom = total_prob - prob_with_symptom
 
     gain = total_prob - (prob_with_symptom * prob_with_symptom) - (prob_without_symptom * prob_without_symptom)
