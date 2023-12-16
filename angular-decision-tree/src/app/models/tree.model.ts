@@ -3,3 +3,9 @@ export interface TreeNode {
   label?: string;
   children?: TreeNode[];
 }
+
+export interface NodeModel {
+  key: string;
+  label: string;
+  children?: Node[];
+}

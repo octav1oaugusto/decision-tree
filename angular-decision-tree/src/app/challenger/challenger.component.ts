@@ -7,6 +7,10 @@ interface Node {
   children?: Node[];
 }
 
+class CurrentChildren {
+  children: Node[] = [];
+}
+
 @Component({
   selector: 'challenger',
   templateUrl: './challenger.component.html',
@@ -16,38 +20,76 @@ export class ChallengerComponent implements OnInit {
   constructor(private treeService: DecisionTreeService) {}
   node?: string;
   data: Node[] = [];
+  currentChildren = new CurrentChildren();
+  lastLeaf: boolean = false;
 
   ngOnInit() {
     this.getTreeData();
-    const targetLabel = 'l99'; // Substitua com a palavra-chave desejada
-
-    this.findLabel(this.data, targetLabel);
   }
 
   getTreeData() {
     this.treeService.getTree().subscribe((data) => {
       this.data = data;
-      console.log('Tree Data:', this.data);
-      this.findLabel(this.data, '999');
+      this.node = this.findLabelByKey(this.data, '0', this.currentChildren);
     });
   }
 
-  findLabel(node: Node[], targetLabel: string): string | undefined {
-    for (const item of node) {
-      console.log('item', item.label);
-      this.node = item.label;
-      // if (item.label.includes(targetLabel)) {
-      //   return `Seu programa tem "${targetLabel}"`;
-      // }
-
-      if (item.children) {
-        // const result = this.findLabel(item.children, targetLabel);
-        // if (result) {
-        //   return result;
-        // }
+  findLabelByKey(
+    nodes: Node[],
+    targetKey: string,
+    currentChildren: CurrentChildren
+  ): string | undefined {
+    for (const node of nodes) {
+      const result = this.findLabelInNode(node, targetKey, currentChildren);
+      if (result) {
+        return result;
       }
     }
 
     return undefined;
+  }
+
+  findLabelInNode(
+    node: Node,
+    targetKey: string,
+    currentChildren: CurrentChildren
+  ): string | undefined {
+    if (node.key === targetKey) {
+      if (node.children) {
+        currentChildren.children = node.children;
+      }
+      return node.label;
+    }
+
+    if (node.children) {
+      const childResult = this.findLabelByKey(
+        node.children,
+        targetKey,
+        currentChildren
+      );
+      if (childResult) {
+        return childResult;
+      }
+    }
+
+    return undefined;
+  }
+
+  handleButtonClick(response: string) {
+    console.log(response);
+    if (response == 'yes' || response == 'maybe') {
+      this.node = this.findLabelByKey(
+        this.data,
+        this.currentChildren.children[0].key,
+        this.currentChildren
+      );
+    }
+    if (response == 'no') {
+      this.node = this.findLabelByKey(
+        this.data,
+        this.currentChildren.children[1].key,
+        this.currentChildren
+      );
+    }
   }
 }
