@@ -1,11 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { FileUploadService } from '../../providers/file-upload.service';
-
-interface UploadEvent {
-  originalEvent: Event;
-  files: File[];
-}
 
 @Component({
   selector: 'file-upload',
@@ -18,7 +14,8 @@ export class FileUploadComponent implements OnInit {
   file: Set<File>;
   constructor(
     private messageService: MessageService,
-    private fileUploadoService: FileUploadService
+    private fileUploadoService: FileUploadService,
+    private router: Router
   ) {}
 
   ngOnInit() {}
@@ -30,11 +27,12 @@ export class FileUploadComponent implements OnInit {
     if (this.file && this.file.size > 0) {
       this.fileUploadoService.upload(this.file).subscribe((res) => {
         if (res.success)
-          this.messageService.add({
-            severity: 'info',
-            summary: 'Success',
-            detail: 'File upload successful',
-          });
+          // this.messageService.add({
+          //   severity: 'info',
+          //   summary: 'Success',
+          //   detail: 'File upload successful',
+          // });
+          this.router.navigate(['/challenger']);
       });
     }
   }
