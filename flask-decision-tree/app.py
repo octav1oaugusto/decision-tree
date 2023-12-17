@@ -9,7 +9,8 @@ from files import FileStorage
 app = Flask(__name__)
 CORS(app)
 
-UPLOADS_PATH = 'uploads/regras-teste.csv'
+UPLOADS_FOLDER = 'uploads'
+UPLOADS_PATH = os.path.join(UPLOADS_FOLDER, 'regras-teste.csv')
 
 # Main route "/api"
 @app.route('/api', methods=['GET'])
@@ -32,12 +33,17 @@ def post_file():
     # Get file from the request
     file = request.files['file']
     if file:
-        file.save(UPLOADS_PATH)
-        fs = FileStorage.instance()
-        fs.set_rules_from_file(UPLOADS_PATH)
-        return {'success': True, 'message': 'File received successfully!', 'rules_count': len(fs.rules)}
+        save_upload(file)
+        return {'success': True, 'message': 'File received successfully!'}
 
     return jsonify({'success': False, 'message': f'Invalid file'}), 500
+
+def save_upload(file):
+    os.makedirs(UPLOADS_FOLDER, exist_ok=True)
+
+    file.save(UPLOADS_PATH)
+    fs = FileStorage.instance()
+    fs.set_rules_from_file(UPLOADS_PATH)
 
 if __name__ == '__main__':
     if os.path.exists(UPLOADS_PATH):
