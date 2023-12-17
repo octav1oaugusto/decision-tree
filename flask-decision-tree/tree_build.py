@@ -22,9 +22,9 @@ def build_decision_tree(rules, discarded_symptoms=set()):
     best_symptom = max(valid_symptoms, key=lambda x: information_gain(x, rules))
 
     rules_with_symptom = [rule for rule in rules if best_symptom in rule[1] and best_symptom.not_it() not in rule[1]]
-    print(len(rules_with_symptom))
+    #print(len(rules_with_symptom))
     rules_without_symptom = [rule for rule in rules if best_symptom not in rule[1] or best_symptom.not_it() in rule[1]]
-    print(len(rules_without_symptom))
+    #print(len(rules_without_symptom))
 
     left_subtree = build_decision_tree(rules_with_symptom, discarded_symptoms.union({best_symptom}))
     # middle_subtree = build_decision_tree(rules,  discarded_symptoms.union({best_symptom})) // pra "n sei" como resposta.

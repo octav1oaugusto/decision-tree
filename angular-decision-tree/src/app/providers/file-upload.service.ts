@@ -1,4 +1,4 @@
-import { HttpClient, HttpRequest, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, filter, map } from 'rxjs';
 import { FileUplodResponseModel } from '../models/file.model';
@@ -11,9 +11,10 @@ export class FileUploadService {
 
   constructor(private http: HttpClient) {}
 
-  upload(file: Set<File>): Observable<FileUplodResponseModel> {
+  upload(file: File): Observable<FileUplodResponseModel> {
     const formData = new FormData();
-    file.forEach((file) => formData.append('file', file, file.name));
+    formData.append('file', file, file.name)
+
     const request = new HttpRequest(
       'POST',
       `${this.apiUrl}/file-upload`,

@@ -14,7 +14,7 @@ export class FileUploadComponent implements OnInit {
   file: Set<File>;
   constructor(
     private messageService: MessageService,
-    private fileUploadoService: FileUploadService,
+    private fileUploadService: FileUploadService,
     private router: Router
   ) {}
 
@@ -22,10 +22,8 @@ export class FileUploadComponent implements OnInit {
 
   onUpload(event: any) {
     const file = event.files[0];
-    this.file = new Set();
-    this.file.add(file);
-    if (this.file && this.file.size > 0) {
-      this.fileUploadoService.upload(this.file).subscribe((res) => {
+    if (file) {
+      this.fileUploadService.upload(file).subscribe((res) => {
         if (res.success)
           // this.messageService.add({
           //   severity: 'info',
