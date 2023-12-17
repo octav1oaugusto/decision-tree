@@ -1,3 +1,6 @@
+import csv
+import os
+import shutil
 from flask import Flask, request, jsonify
 from tree_build import get_tree_data
 from flask_cors import CORS, cross_origin
@@ -26,18 +29,44 @@ def get_tree():
 def post_file():
     # Get data from the request body
     dataFile = request.get_data(as_text=True)
-    # data = request.files['file']
-    # try:
-    #     fs = FileStorage.instance()
-    #     fs.set_rules_from_text(data)
-    #     return {'rules_count': len(fs.rules)}
-    # except Exception as err:
-    #     print('ERROR "/api/file" - ', err)
-    #     return {}, 500
     file = request.files['file']
-    print(dataFile)
+    move_file_to_uploads(process_data(dataFile))
     print(file)
     return jsonify({'success': True, 'message': f'File received successfully'})
+  
+def process_data(data):
+    temporary_path = 'temp.csv'
+    with open(temporary_path, 'w', newline='') as temp_file:
+        csv_writer = csv.writer(temp_file)
+        for line in data.splitlines():
+            if line:
+                components = [component.strip('"') for component in line.split(',', 2)]
+                
+                if len(components) >= 2:
+                    name = components[0]
+                    tags = () if len(components) == 2 else tuple(tag.strip('"') for tag in components[1][1:-1].split(';'))
+                    value_str = components[-1].rstrip(';')
+                    
+                    try:
+                        value = float(value_str)
+                        csv_writer.writerow([name, tags, value])
+                    except ValueError:
+                        print(f"Skipping invalid line: {line}")
+
+    return temporary_path
+
+
+def move_file_to_uploads(temporary_path):
+    uploads_folder = 'uploads'
+    destination_path = os.path.join(uploads_folder, 'regras-teste.csv')
+    
+    os.makedirs(uploads_folder, exist_ok=True)
+    
+    if os.path.exists(destination_path):
+        os.remove(destination_path) 
+        
+    shutil.move(temporary_path, destination_path)
+
 if __name__ == '__main__':
     FileStorage.instance().set_rules_from_file()
     app.run(debug=True)
