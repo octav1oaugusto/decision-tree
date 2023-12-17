@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TreeNode } from 'primeng/api';
-import { DecisionTreeService } from '../providers/decision-tree.service';
+import { DecisionTreeService } from '../../providers/decision-tree.service';
 
 @Component({
   selector: 'tree-diagram',

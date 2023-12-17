@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MessageService } from 'primeng/api';
-import { DecisionTreeService } from '../providers/decision-tree.service';
+import { DecisionTreeService } from '../../providers/decision-tree.service';
 
 interface UploadEvent {
   originalEvent: Event;

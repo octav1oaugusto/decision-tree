@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SymptomsModel } from '../models/tree.model';
-import { DecisionTreeService } from '../providers/decision-tree.service';
-import { getSymptomsByTail } from '../utils/utils';
+import { SymptomsModel } from '../../models/tree.model';
+import { DecisionTreeService } from '../../providers/decision-tree.service';
+import { getSymptomsByTail } from '../../utils/utils';
 
 interface Node {
   key: string;

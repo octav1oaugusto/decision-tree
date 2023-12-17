@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ChallengerComponent } from './challenger/challenger.component';
-import { FileUploadComponent } from './file-upload/file-upload.component';
-import { TreeDiagramComponent } from './tree-diagram/tree-diagram.component';
+import { ChallengerComponent } from './components/challenger/challenger.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import { TreeDiagramComponent } from './components/tree-diagram/tree-diagram.component';
 
 const appRoutes: Routes = [
   { path: 'file-upload', component: FileUploadComponent },
