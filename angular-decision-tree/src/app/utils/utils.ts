@@ -181,6 +181,8 @@ export function getSymptomsByTail() {
     { key: 'Finite Game', label: 'Uma das propriedades do algoritmo é' },
     { key: 'Xor-Sum', label: 'O seu algoritmo tem o sintoma' },
     { key: 'Bitwise Operation', label: 'O seu algoritmo tem o sintoma' },
+    { key: 'Disjoint Set Union', label: 'O seu algoritmo tem o sintoma' },
+    { key: 'Eulerian Cycle', label: 'O seu algoritmo tem o sintoma' },
   ];
   return symptoms;
 }

@@ -1,6 +1,4 @@
-import csv
 import os
-import shutil
 from flask import Flask, request, jsonify
 from tree_build import get_tree_data
 from flask_cors import CORS, cross_origin
@@ -10,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 UPLOADS_FOLDER = 'uploads'
-UPLOADS_PATH = os.path.join(UPLOADS_FOLDER, 'regras-teste.csv')
+UPLOADS_PATH = os.path.join(UPLOADS_FOLDER, 'regras.csv')
 
 # Main route "/api"
 @app.route('/api', methods=['GET'])

@@ -26,6 +26,7 @@ export class ChallengerComponent implements OnInit {
   lstSymptoms: SymptomsModel[] = [];
   currentChildren = new CurrentChildren();
   lastLeaf: boolean = false;
+  buttonDisabled: boolean = true;
 
   ngOnInit() {
     this.getSymptoms();
@@ -36,6 +37,9 @@ export class ChallengerComponent implements OnInit {
     this.treeService.getTree().subscribe((data) => {
       this.data = data;
       this.node = this.findLabelByKey(this.data, '0', this.currentChildren);
+      if (this.data.length) {
+        this.buttonDisabled = false;
+      }
     });
   }
 
@@ -120,5 +124,7 @@ export class ChallengerComponent implements OnInit {
   restartButtonClick() {
     this.getTreeData();
     this.lastLeaf = false;
+    this.buttonDisabled = true;
+    this.question = undefined;
   }
 }

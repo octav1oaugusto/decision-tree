@@ -6,10 +6,10 @@
   </div>
   <div class="card">
     <div class="mb-3 flex justify-content-evenly flex-wrap">
-      <p-button label="Sim" [raised]="true"
-        (onClick)="handleButtonClick('yes')"></p-button>
+      <p-button label="Sim" [raised]="true" (onClick)="handleButtonClick('yes')"
+        [disabled]="buttonDisabled"></p-button>
       <p-button label="Não" [raised]="true" (onClick)="handleButtonClick('no')"
-        severity="danger"></p-button>
+        severity="danger" [disabled]="buttonDisabled"></p-button>
       <!-- <p-button label="Talvez" [raised]="true"
         (onClick)="handleButtonClick('maybe')" severity="warning"></p-button> -->
     </div>
