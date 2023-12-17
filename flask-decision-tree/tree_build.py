@@ -21,10 +21,13 @@ def build_decision_tree(rules, discarded_symptoms=set()):
     valid_symptoms = considered_symptoms - discarded_symptoms
     best_symptom = max(valid_symptoms, key=lambda x: information_gain(x, rules))
 
-    rules_with_symptom = [rule for rule in rules if best_symptom in rule[1]]
-    rules_without_symptom = [rule for rule in rules if best_symptom not in rule[1]]
+    rules_with_symptom = [rule for rule in rules if best_symptom in rule[1] and best_symptom.not_it() not in rule[1]]
+    print(len(rules_with_symptom))
+    rules_without_symptom = [rule for rule in rules if best_symptom not in rule[1] or best_symptom.not_it() in rule[1]]
+    print(len(rules_without_symptom))
 
     left_subtree = build_decision_tree(rules_with_symptom, discarded_symptoms.union({best_symptom}))
+    # middle_subtree = build_decision_tree(rules,  discarded_symptoms.union({best_symptom})) // pra "n sei" como resposta.
     right_subtree = build_decision_tree(rules_without_symptom, discarded_symptoms)
 
     return TreeNode(symptom=best_symptom, left=left_subtree, right=right_subtree)
@@ -38,17 +41,6 @@ def information_gain(symptom, rules):
     gain = total_prob - (prob_with_symptom * prob_with_symptom) - (prob_without_symptom * prob_without_symptom)
 
     return gain
-
-# unicamente pra debug
-def print_tree(node, depth=0):
-    if node is not None:
-        print("  " * depth, end="")
-        if node.symptom is not None:
-            print(f"{node.symptom}?")
-        if node.cause is not None:
-            print(f"  --> {node}")
-        print_tree(node.left, depth + 1)
-        print_tree(node.right, depth + 1)
 
 def get_leaves(leaves, id):
     ret = []
