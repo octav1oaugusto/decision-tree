@@ -12,6 +12,8 @@ import { FileUploadService } from '../../providers/file-upload.service';
 export class FileUploadComponent implements OnInit {
   @ViewChild('fileInput') fileInput!: ElementRef;
   file: Set<File>;
+  visible: boolean = false;
+  keyMessage: string;
   constructor(
     private messageService: MessageService,
     private fileUploadService: FileUploadService,
@@ -24,14 +26,32 @@ export class FileUploadComponent implements OnInit {
     const file = event.files[0];
     if (file) {
       this.fileUploadService.upload(file).subscribe((res) => {
-        if (res.success)
-          // this.messageService.add({
-          //   severity: 'info',
-          //   summary: 'Success',
-          //   detail: 'File upload successful',
-          // });
-          this.router.navigate(['/challenger']);
+        if (res.success) {
+          if (!this.visible) {
+            this.keyMessage = 'confirm';
+            this.messageService.add({
+              key: this.keyMessage,
+              sticky: true,
+              severity: 'success',
+              summary: 'Navegar para o desafio?',
+            });
+            this.visible = true;
+          }
+        }
       });
     }
+  }
+
+  onConfirm() {
+    this.messageService.clear(this.keyMessage);
+    this.visible = false;
+    if (this.keyMessage == 'confirm') {
+      this.router.navigate(['/challenger']);
+    }
+  }
+
+  onReject() {
+    this.messageService.clear(this.keyMessage);
+    this.visible = false;
   }
 }
