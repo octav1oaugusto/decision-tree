@@ -55,7 +55,7 @@ export class ChallengerComponent implements OnInit {
     for (const node of nodes) {
       const result = this.findLabelInNode(node, targetKey, currentChildren);
       if (result) {
-        console.log(result);
+        this.node = result;
         this.question = this.generateQuestion(result);
         return result;
       }
@@ -93,7 +93,6 @@ export class ChallengerComponent implements OnInit {
   }
 
   handleButtonClick(response: string) {
-    console.log(response);
     if (response == 'yes' || response == 'maybe') {
       this.node = this.findLabelByKey(
         this.data,
@@ -113,7 +112,7 @@ export class ChallengerComponent implements OnInit {
   generateQuestion(targetKey: string): string | undefined {
     const key = targetKey.split('"')[1].trim();
     const entry = this.lstSymptoms.find((item) => item.key === key);
-    console.log(entry);
+    this.node = key;
     if (entry) {
       return `${entry.label} ${entry.key}?`;
     } else {
