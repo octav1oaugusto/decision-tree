@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SymptomsModel } from '../../models/tree.model';
 import { DecisionTreeService } from '../../providers/decision-tree.service';
 import { getSymptomsByTail } from '../../utils/utils';
@@ -19,7 +20,6 @@ class CurrentChildren {
   styleUrl: './challenger.component.css',
 })
 export class ChallengerComponent implements OnInit {
-  constructor(private treeService: DecisionTreeService) {}
   node?: string;
   question: string | undefined;
   data: Node[] = [];
@@ -27,6 +27,11 @@ export class ChallengerComponent implements OnInit {
   currentChildren = new CurrentChildren();
   lastLeaf: boolean = false;
   buttonDisabled: boolean = true;
+
+  constructor(
+    private treeService: DecisionTreeService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.getSymptoms();
@@ -55,7 +60,7 @@ export class ChallengerComponent implements OnInit {
     for (const node of nodes) {
       const result = this.findLabelInNode(node, targetKey, currentChildren);
       if (result) {
-        console.log(result);
+        this.node = result;
         this.question = this.generateQuestion(result);
         return result;
       }
@@ -93,7 +98,6 @@ export class ChallengerComponent implements OnInit {
   }
 
   handleButtonClick(response: string) {
-    console.log(response);
     if (response == 'yes' || response == 'maybe') {
       this.node = this.findLabelByKey(
         this.data,
@@ -108,12 +112,15 @@ export class ChallengerComponent implements OnInit {
         this.currentChildren
       );
     }
+    if (response == 'tree') {
+      this.router.navigate(['/tree-diagram']);
+    }
   }
 
   generateQuestion(targetKey: string): string | undefined {
     const key = targetKey.split('"')[1].trim();
     const entry = this.lstSymptoms.find((item) => item.key === key);
-    console.log(entry);
+    this.node = key;
     if (entry) {
       return `${entry.label} ${entry.key}?`;
     } else {
