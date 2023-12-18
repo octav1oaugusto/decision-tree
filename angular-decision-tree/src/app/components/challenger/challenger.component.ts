@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SymptomsModel } from '../../models/tree.model';
 import { DecisionTreeService } from '../../providers/decision-tree.service';
 import { getSymptomsByTail } from '../../utils/utils';
@@ -19,7 +20,6 @@ class CurrentChildren {
   styleUrl: './challenger.component.css',
 })
 export class ChallengerComponent implements OnInit {
-  constructor(private treeService: DecisionTreeService) {}
   node?: string;
   question: string | undefined;
   data: Node[] = [];
@@ -27,6 +27,11 @@ export class ChallengerComponent implements OnInit {
   currentChildren = new CurrentChildren();
   lastLeaf: boolean = false;
   buttonDisabled: boolean = true;
+
+  constructor(
+    private treeService: DecisionTreeService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.getSymptoms();
@@ -106,6 +111,9 @@ export class ChallengerComponent implements OnInit {
         this.currentChildren.children[1].key,
         this.currentChildren
       );
+    }
+    if (response == 'tree') {
+      this.router.navigate(['/tree-diagram']);
     }
   }
 
