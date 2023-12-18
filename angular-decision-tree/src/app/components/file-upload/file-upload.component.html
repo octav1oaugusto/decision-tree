@@ -1,0 +1,22 @@
+<div class="card flex justify-content-center">
+  <p-toast></p-toast>
+  <p-fileUpload mode="basic" chooseLabel="Choose" name="file"
+    url="https://www.primefaces.org/cdn/api/upload.php" accept=".csv"
+    (onUpload)="onUpload($event)" method="post"></p-fileUpload>
+</div>
+
+<div class="flex justify-content-center">
+  <p-toast position="top-center" key="confirm" (onClose)="onReject()"
+    [baseZIndex]="5000">
+    <ng-template let-message pTemplate="message">
+      <div class="flex flex-column align-items-start" style="flex: 1">
+        <div class="flex align-items-center gap-2">
+        </div>
+        <div class="font-medium text-lg my-3 text-900">{{ message.summary }}
+        </div>
+        <p-button class="p-button-sm" label="Confirmar"
+          (click)="onConfirm()"></p-button>
+      </div>
+    </ng-template>
+  </p-toast>
+</div>

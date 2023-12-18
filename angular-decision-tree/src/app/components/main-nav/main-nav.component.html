@@ -1,0 +1,10 @@
+<div class="mb-3">
+  <p-sidebar [(visible)]="sidebarVisible" styleClass="w-30rem">
+    <div>
+      <p-menu [model]="items" styleClass="w-full"
+        (click)="sidebarVisible = !sidebarVisible"></p-menu>
+    </div>
+  </p-sidebar>
+  <p-button (click)="sidebarVisible = !sidebarVisible"
+    icon="pi pi-bars"></p-button>
+</div>

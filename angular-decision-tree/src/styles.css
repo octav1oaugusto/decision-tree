@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+html {
+  font-size: 14px;
+}
+
+body {
+
+  font-family: var(--font-family);
+  font-weight: normal;
+  background: var(--surface-ground);
+  background-image: url(assets/tree-background.jpg);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  color: var(--text-color);
+  padding: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  height: 80vh;
+  padding: 2%;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%; /* Torna as imagens responsivas */
+  height: auto;
+}

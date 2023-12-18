@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="mb-3 flex justify-content-center flex-wrap">
+    <button pButton type="button" label="Expand all" (click)="expandAll()"
+      class="mr-2"></button>
+    <button pButton type="button" label="Collapse all"
+      (click)="collapseAll()"></button>
+  </div>
+  <p-tree [value]="files" class="w-full md:w-30rem"></p-tree>
+</div>
