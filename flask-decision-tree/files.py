@@ -2,7 +2,7 @@ from conditions import parse_condition
 from helpers import parse_id, parse_solution
 
 # Filenames
-RULES_FILE = 'regras.csv'
+RULES_FILE = 'rules.txt'
 SOLUTIONS_FILE = 'solutions.txt'
 
 def parse_file(filename):

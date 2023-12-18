@@ -22,9 +22,7 @@ def build_decision_tree(rules, discarded_symptoms=set()):
     best_symptom = max(valid_symptoms, key=lambda x: information_gain(x, rules))
 
     rules_with_symptom = [rule for rule in rules if best_symptom in rule[1] and best_symptom.not_it() not in rule[1]]
-    #print(len(rules_with_symptom))
     rules_without_symptom = [rule for rule in rules if best_symptom not in rule[1] or best_symptom.not_it() in rule[1]]
-    #print(len(rules_without_symptom))
 
     left_subtree = build_decision_tree(rules_with_symptom, discarded_symptoms.union({best_symptom}))
     # middle_subtree = build_decision_tree(rules,  discarded_symptoms.union({best_symptom})) // pra "n sei" como resposta.
@@ -61,15 +59,15 @@ def tree_data(tree, id= '0'):
     if type(ret["children"][1]) == list:
         ret["children"][1] = ret["children"][1][0]
     
-    for i in range(len(ret["children"])):
-        if ret["children"][i] == None:
-            ret["children"].pop(i)
+    # for i in range(len(ret["children"])):
+    #     if ret["children"][i] == None:
+    #         ret["children"].pop(i)
+    ret["children"] = [child for child in ret["children"] if child is not None]
     return ret
 
 def get_tree_data():
     return [tree_data(build_decision_tree(get_rules()))]
 
-#parse_rules() : [("Causa", [Condition("cond", not:bool)], 0.55f)]
-
 if __name__ == "__main__":
-    print(get_tree_data())
+    print([conds[1] for conds in get_rules()])
+    # print(get_tree_data())
